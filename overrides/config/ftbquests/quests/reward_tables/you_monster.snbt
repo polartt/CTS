@@ -1,0 +1,14 @@
+{
+	id: "460D0349F5DFD8CE"
+	order_index: 0
+	title: "You monster."
+	loot_size: 1
+	rewards: [
+		{ title: "Murder Snacks", item: "create:sweet_roll", count: 16 }
+		{
+			xp_levels: 5
+			type: "xp_levels"
+		}
+		{ title: "Genuine Human Soul", item: "alexsmobs:soul_heart" }
+	]
+}

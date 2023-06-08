@@ -1,0 +1,13 @@
+{
+	id: "78A81D73E06A9B03"
+	order_index: 6
+	title: "Resource Swap"
+	loot_size: 1
+	rewards: [
+		{ item: "minecraft:iron_ingot", count: 64, weight: 5.0f }
+		{ item: "minecraft:gold_ingot", count: 16, weight: 5.0f }
+		{ item: "minecraft:copper_ingot", count: 8 }
+		{ item: "create:zinc_ingot", count: 4 }
+		{ item: "minecraft:diorite", count: 32, weight: 2.0f }
+	]
+}

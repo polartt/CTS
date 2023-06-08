@@ -1,0 +1,21 @@
+{
+	id: "2783FADFD0270CF9"
+	order_index: 7
+	title: "Exploration Care Package"
+	loot_size: 1
+	rewards: [
+		{ item: "minecraft:torch", count: 16, weight: 10.0f }
+		{ item: "create:sweet_roll", count: 12, weight: 10.0f }
+		{ item: "create:track", count: 16, weight: 3.0f }
+		{ item: "minecraft:andesite", count: 8, weight: 5.0f }
+		{ item: "minecraft:oak_log", count: 12, weight: 5.0f }
+		{ item: "minecraft:bone", count: 3, weight: 5.0f }
+		{ item: "minecraft:raw_iron", count: 3, weight: 2.0f }
+		{ item: "minecraft:raw_gold", weight: 2.0f }
+		{ item: "minecraft:raw_copper_block", weight: 2.0f }
+		{ item: "create:raw_zinc", count: 2, weight: 2.0f }
+		{ item: "create:cogwheel", count: 2, weight: 4.0f }
+		{ item: "create:large_cogwheel", weight: 4.0f }
+		{ item: "create:brass_nugget", count: 3, weight: 1.5f }
+	]
+}

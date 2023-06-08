@@ -1,0 +1,17 @@
+{
+	id: "0F3EC90A3DC76586"
+	order_index: 2
+	title: "Honest Work"
+	loot_size: 1
+	rewards: [
+		{ item: "farmersdelight:tomato_seeds", count: 32 }
+		{ item: "farmersdelight:cabbage_seeds", count: 32 }
+		{ item: "minecraft:beetroot_seeds", count: 32 }
+		{ item: "supplementaries:flax_seeds", count: 32 }
+		{ item: "minecraft:wheat_seeds", count: 32 }
+		{ item: "minecraft:carrot", count: 32 }
+		{ item: "minecraft:potato", count: 32 }
+		{ item: "farmersdelight:onion", count: 32 }
+		{ item: "farmersdelight:rice", count: 32 }
+	]
+}

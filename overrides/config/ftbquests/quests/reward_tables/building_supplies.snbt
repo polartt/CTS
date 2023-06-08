@@ -1,0 +1,15 @@
+{
+	id: "5BE0507076CCCE71"
+	order_index: 3
+	title: "Building Supplies"
+	loot_size: 1
+	rewards: [
+		{ item: "minecraft:clay", count: 64 }
+		{ item: "minecraft:sand", count: 64 }
+		{ item: "minecraft:grass_block", count: 16 }
+		{ item: "minecraft:sponge", count: 2 }
+		{ item: "minecraft:cobbled_deepslate", count: 64 }
+		{ item: "minecraft:stone", count: 64 }
+		{ item: "quark:trowel" }
+	]
+}

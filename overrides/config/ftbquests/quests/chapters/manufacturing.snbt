@@ -1,0 +1,329 @@
+{
+	id: "041F460D0E968822"
+	group: ""
+	order_index: 3
+	filename: "manufacturing"
+	title: "Manufacturing"
+	subtitle: ["CTS team changed some recipes to make the game more enjoyable, this chapter covers those."]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: 4.5d
+			y: -1.0d
+			width: 4.0d
+			height: 4.0d
+			rotation: 0.0d
+			image: "createbigcannons:textures/particle/cannon_smoke_1.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -6.0d
+			y: -2.5d
+			width: 4.0d
+			height: 4.0d
+			rotation: 0.0d
+			image: "farmersdelight:textures/particle/steam_4.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 1.0d
+			y: -8.0d
+			width: 3.0d
+			height: 3.0d
+			rotation: 0.0d
+			image: "createbigcannons:textures/particle/cannon_smoke_3.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			title: "Trust me, you'll like this."
+			x: -3.0d
+			y: -2.5d
+			subtitle: "Steel can be used as an iron substitute as stated in the predeployment phase, but it can also be made into decent cannons!"
+			dependencies: ["052697C7EB1951B0"]
+			id: "7D91B8C6446CA488"
+			tasks: [{
+				id: "59D383DDD78AF19F"
+				type: "item"
+				title: "Any #forge:ingots/steel"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:ingots/steel"
+					}
+				}
+				count: 16L
+			}]
+			rewards: [
+				{
+					id: "735A8BAC1F65B236"
+					type: "item"
+					item: "minecraft:raw_iron_block"
+					count: 4
+				}
+				{
+					id: "0F33D6C4DD22D16E"
+					type: "item"
+					item: "create:precision_mechanism"
+				}
+				{
+					id: "51C0FB4CDCEA599D"
+					type: "item"
+					item: "minecraft:coal_block"
+					count: 3
+				}
+			]
+		}
+		{
+			title: "Its like copper but cooler."
+			x: -1.0d
+			y: -2.5d
+			subtitle: "Much like steel, bronze can be used as a substitue for copper in many recipes to give more output. Use this to your advantage when making large pipe networks!"
+			id: "7AB93E96A0D66A2F"
+			tasks: [{
+				id: "56FE223CAA208ABC"
+				type: "item"
+				title: "Any #forge:ingots/bronze"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:ingots/bronze"
+					}
+				}
+				count: 16L
+			}]
+			rewards: [
+				{
+					id: "080192D07A680C58"
+					type: "item"
+					item: "minecraft:raw_copper_block"
+					count: 4
+				}
+				{
+					id: "5B77C6C5C8EB3D91"
+					type: "item"
+					item: "create:raw_zinc_block"
+					count: 2
+				}
+				{
+					id: "2E37963DF138642C"
+					type: "item"
+					item: "create:precision_mechanism"
+				}
+			]
+		}
+		{
+			title: "The bee's wanted this, I swear!"
+			icon: "minecraft:honey_bottle"
+			x: -4.0d
+			y: -5.0d
+			subtitle: "Using a small amount of honey and lava in a mixer, you can infinitely produce limestone much faster than a normal cobble gen."
+			id: "052697C7EB1951B0"
+			tasks: [{
+				id: "5FB7E775283B24CB"
+				type: "item"
+				item: "create:limestone"
+				count: 256L
+			}]
+			rewards: [{
+				id: "076C79B61FA6956F"
+				type: "item"
+				item: "minecraft:beehive"
+			}]
+		}
+		{
+			title: "So you've heard of cobble gens..."
+			icon: {
+				id: "minecraft:potion"
+				Count: 1b
+				tag: {
+					Potion: "minecraft:water"
+				}
+			}
+			x: -2.0d
+			y: -5.0d
+			subtitle: "Using a small amount of water and lava in a mixer, you can produce an infinite amount of cobble much faster than a normal cobble gen! (And a lot less lag is made too.)"
+			optional: true
+			id: "2AC625E9083A497E"
+			tasks: [{
+				id: "448A6B7FD9830CAA"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 256L
+			}]
+			rewards: [{
+				id: "5446FDE22F26CBB1"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+		}
+		{
+			title: "Chocolate rain!"
+			icon: "create_confectionery:bar_of_black_chocolate"
+			x: 0.0d
+			y: -5.0d
+			subtitle: "Using a small amount of chocolate and lava in a mixer, you can infinitely produce scoria for all your needs!"
+			optional: true
+			id: "0828E5AF24129B3F"
+			tasks: [{
+				id: "44E685825EEE560B"
+				type: "item"
+				item: "create:scoria"
+				count: 256L
+			}]
+			rewards: [{
+				id: "1706FA7BA4B8F3CC"
+				type: "item"
+				item: "createaddition:chocolate_cake"
+			}]
+		}
+		{
+			title: "How hungry..."
+			x: -6.5d
+			y: -5.0d
+			subtitle: "To make quark limestone, you'll need to combine lime, and stone! I know, its abstract, but you'll figure it out."
+			dependencies: ["052697C7EB1951B0"]
+			id: "692E504848992E59"
+			tasks: [{
+				id: "3D9CCFE990A1D695"
+				type: "item"
+				item: "quark:limestone"
+				count: 32L
+			}]
+			rewards: [{
+				id: "78C5873258F03AD4"
+				type: "item"
+				item: "minecraft:sea_pickle"
+			}]
+		}
+		{
+			title: "Biggest Bucket"
+			x: 1.5d
+			y: -2.5d
+			subtitle: "Fluid tanks can each store 8 buckets of a fluid, and can be connected together to make large tank multiblock structures. They must be filled by pipes sadly."
+			dependencies: ["4CB4127C03E26D86"]
+			id: "7CC38657BA793029"
+			tasks: [{
+				id: "35CC8FF91BA046F3"
+				type: "item"
+				item: "create:fluid_tank"
+				count: 8L
+			}]
+			rewards: [{
+				id: "5FC9407449CCA793"
+				type: "item"
+				item: "create:fluid_tank"
+				count: 16
+			}]
+		}
+		{
+			title: "Doubler Double Chest"
+			x: 3.5d
+			y: -2.5d
+			subtitle: "Vaults act as a chest alone, but can be connected into large \"chests.\" Only downside is they can not be interacted with by players."
+			dependencies: ["4CB4127C03E26D86"]
+			id: "5B8370D364E2C816"
+			tasks: [{
+				id: "5B2719D997E584A9"
+				type: "item"
+				item: "create:item_vault"
+				count: 8L
+			}]
+			rewards: [{
+				id: "3BC7AD48248E8945"
+				type: "item"
+				item: "create:item_vault"
+				count: 16
+			}]
+		}
+		{
+			title: "Silly chests."
+			x: 2.5d
+			y: -5.0d
+			subtitle: "Barrels are the main ingredient in tanks and vaults, and with the factories you will build, you'll want lots of these."
+			description: ["(The sequenced assembly recipe is the cheapest way to make them, and was added by the CTS team)"]
+			id: "4CB4127C03E26D86"
+			tasks: [{
+				id: "157CE16815E24653"
+				type: "item"
+				item: "minecraft:barrel"
+			}]
+		}
+		{
+			title: "It's not called Create The Server for nothing..."
+			icon: "create:wrench"
+			x: -2.0d
+			y: 0.0d
+			subtitle: "CTS is all about making cool builds and automation (and war but we don't talk about that). So it's a good idea to automate anything you can automate, no matter how complicated or strange. Sometimes the process of automating automation is amazing in itself!"
+			description: ["Collect a bunch of the supplies for most factories. You might hate this now, but it's going to be really useful later."]
+			dependencies: [
+				"7D91B8C6446CA488"
+				"7AB93E96A0D66A2F"
+			]
+			id: "2E70FF68ACAA11F1"
+			tasks: [
+				{
+					id: "08CD7F4961A3069A"
+					type: "item"
+					item: "create:shaft"
+					count: 256L
+				}
+				{
+					id: "126847D3D22D2B3E"
+					type: "item"
+					item: "create:cogwheel"
+					count: 128L
+				}
+				{
+					id: "28E744228C9C5D24"
+					type: "item"
+					item: "create:large_cogwheel"
+					count: 128L
+				}
+				{
+					id: "4261683641B05A8D"
+					type: "item"
+					item: "create:andesite_casing"
+					count: 64L
+				}
+				{
+					id: "4C013C393224773D"
+					type: "item"
+					item: "create:belt_connector"
+					count: 64L
+				}
+				{
+					id: "5910383AF1BAD6AC"
+					type: "item"
+					item: "create:fluid_pipe"
+					count: 256L
+				}
+			]
+			rewards: [{
+				id: "367B67A866779FC3"
+				type: "item"
+				item: {
+					id: "create:extendo_grip"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+	]
+	quest_links: [ ]
+}

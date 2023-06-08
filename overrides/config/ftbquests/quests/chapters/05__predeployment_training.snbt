@@ -1,0 +1,842 @@
+{
+	id: "3A6456D35C3B7F7A"
+	group: ""
+	order_index: 0
+	filename: "05__predeployment_training"
+	title: "Predeployment Training"
+	icon: {
+		id: "create:extendo_grip"
+		Count: 1b
+		tag: {
+			Damage: 0
+		}
+	}
+	subtitle: ["Here is where you'll start out in the server, and learn very basic things about create."]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: 12.0d
+			y: 1.0d
+			width: 3.0d
+			height: 3.0d
+			rotation: 0.0d
+			image: "create:textures/gui/logo.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 3.0d
+			y: -3.0d
+			width: 2.0d
+			height: 4.0d
+			rotation: 0.0d
+			image: "create_things_and_misc:textures/blocks/painting2.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			icon: "chipped:unamused_diorite"
+			x: -3.75d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Y'know, the training is supposed to be before the deployment. However, it still has to happen, so complete it, and you'll get your deployment package afterwards, alright?"
+			size: 1.5d
+			id: "7387030AA352CA10"
+			tasks: [{
+				id: "2E50A70B11022702"
+				type: "checkmark"
+				title: "A little late isn't it?"
+			}]
+			rewards: [{
+				id: "021916F1192F78D9"
+				type: "item"
+				item: "create:sweet_roll"
+				count: 5
+			}]
+		}
+		{
+			x: -1.0d
+			y: 0.0d
+			subtitle: "For legal reasons, we were supposed to mentally test you to see if you were even fit for deployment onto an empty island. Now obviously that hasn't happened yet, so all you'll need to do for us is prove you can get a pickaxe and cobble, and we should be good to go."
+			dependencies: ["7387030AA352CA10"]
+			id: "3E1071A14E2F85E8"
+			tasks: [{
+				id: "2D4514195D9F23C6"
+				type: "advancement"
+				advancement: "minecraft:story/mine_stone"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "79B4F920B162A82C"
+				type: "item"
+				item: "minecraft:torch"
+				count: 32
+			}]
+		}
+		{
+			title: "Steel and Bronze Substitues"
+			icon: "alloyed:steel_ingot"
+			x: -2.5d
+			y: 1.5d
+			subtitle: "CTS has decided to add some KubeJS additions to help with server lag, and with progression. You can craft most iron and copper items with steel or bronze as a substitue, and thus get more of the item. A really good example of this is train tracks."
+			id: "2B93359AE7017784"
+			tasks: [{
+				id: "00273ADC7A574705"
+				type: "checkmark"
+				title: "CTS / Special Info"
+			}]
+		}
+		{
+			icon: "minecraft:cobblestone"
+			x: -0.5d
+			y: 1.5d
+			subtitle: "In terms of lag prevention, we decided to replace the need for cobble gens with a new mixing recipe. Just add a small amount of the usual liquids, and it will infinitely produce the normal result. (This is effectively a much better way to farm these things, so use it to your advantage!)"
+			dependencies: ["2B93359AE7017784"]
+			id: "2E4C7ECE7BA09291"
+			tasks: [{
+				id: "09164F843FA09EE5"
+				type: "checkmark"
+				title: "Lag hurts."
+			}]
+		}
+		{
+			x: -2.0d
+			y: -2.0d
+			subtitle: "When we said beat the competition, we did not mean their skull in. However, since this is still an \"empty\" island, nobody will find the body. So it feels right we should congratulate you for being a star employee!"
+			invisible: true
+			id: "3711413233080BC8"
+			tasks: [{
+				id: "5F4B2A4F4BB37A78"
+				type: "kill"
+				title: "Kill the competition."
+				icon: {
+					id: "minecraft:wooden_sword"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				secret: true
+				entity: "minecraft:player"
+				value: 1L
+			}]
+			rewards: [{
+				id: "6A9E5A20210BB812"
+				type: "choice"
+				exclude_from_claim_all: true
+				table_id: 5047694373544777934L
+			}]
+		}
+		{
+			title: "Basic Intelligence Training"
+			x: 2.25d
+			y: 0.0d
+			shape: "square"
+			subtitle: "To make sure you remembered at least some of the things we didn't tell you about, all you'll have to do is forge one iron ingot. That or steal one..."
+			dependencies: ["3E1071A14E2F85E8"]
+			size: 1.5d
+			id: "22BC1B6395A469C9"
+			tasks: [{
+				id: "0595985A0DF15A98"
+				type: "item"
+				item: "minecraft:iron_ingot"
+			}]
+			rewards: [
+				{
+					id: "60F1B912920C5BEA"
+					type: "choice"
+					exclude_from_claim_all: true
+					table_id: 4266329750709491026L
+				}
+				{
+					id: "27DF957D76EAA100"
+					type: "choice"
+					exclude_from_claim_all: true
+					table_id: 4266329750709491026L
+				}
+				{
+					id: "7C8732572C174314"
+					type: "choice"
+					exclude_from_claim_all: true
+					table_id: 4266329750709491026L
+				}
+			]
+		}
+		{
+			icon: "create:red_toolbox"
+			x: 1.5d
+			y: 1.5d
+			shape: "circle"
+			subtitle: "CTS decided that dying shouldn't suck, but should still hurt. So we decided to rework how death would impact you. For starters, you'll now only drop whats in your main inventory, and any artifacts you are carrying. All armor, and your hotbar, will now be saved."
+			dependencies: ["2E4C7ECE7BA09291"]
+			id: "501DFF18BB52BCAF"
+			tasks: [{
+				id: "6F4A543110A65921"
+				type: "checkmark"
+				title: "Keep Inventory but cool"
+			}]
+		}
+		{
+			icon: "minecraft:writable_book"
+			x: 3.5d
+			y: 1.5d
+			subtitle: "As a thanks for actually reading the info, heres a lil gift."
+			dependencies: ["501DFF18BB52BCAF"]
+			hide: true
+			id: "04B62DAA06B4FFC6"
+			tasks: [{
+				id: "70C5CAFC56ECF832"
+				type: "checkmark"
+				title: "Accept the TOS"
+			}]
+			rewards: [{
+				id: "4EE464C3A6E68B09"
+				type: "item"
+				item: "farmersdelight:cake_slice"
+			}]
+		}
+		{
+			x: 0.5d
+			y: -2.0d
+			subtitle: "Ow"
+			invisible: true
+			id: "1777CFA6A09FEFD5"
+			tasks: [{
+				id: "2C079860EC5348ED"
+				type: "advancement"
+				title: "Crank it up!"
+				icon: "create:hand_crank"
+				advancement: "create:hand_crank_000"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "65E4A3FC5D297C42"
+				type: "item"
+				title: "Join a local bread cult near you!"
+				item: "minecraft:bread"
+				count: 5
+			}]
+		}
+		{
+			title: "Working with water."
+			x: 5.5d
+			y: -8.0d
+			subtitle: "Everyone's gotta start somewhere, and with you it's water wheels!"
+			dependencies: ["1D0EE40343C794A2"]
+			id: "43DD73EE40BE887B"
+			tasks: [{
+				id: "73F2A9C0EC7A682D"
+				type: "advancement"
+				advancement: "create:water_wheel"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "48963393B5766C93"
+				type: "item"
+				item: "create:water_wheel"
+				count: 3
+			}]
+		}
+		{
+			title: "Alloy-ish"
+			x: 3.5d
+			y: -6.0d
+			shape: "gear"
+			subtitle: "This is what you'll need for most of your engineering ideas. Feel free to start stockpiling and selling this stuff around."
+			size: 1.75d
+			id: "1D0EE40343C794A2"
+			tasks: [{
+				id: "2EEE8E12E079FE52"
+				type: "advancement"
+				advancement: "create:andesite_alloy"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "4577728C8BAD174B"
+				type: "item"
+				item: "create:andesite_alloy"
+				count: 8
+			}]
+		}
+		{
+			title: "Working with wind."
+			x: 5.5d
+			y: -6.0d
+			subtitle: "Everyone's gotta start somewhere, and you started with windmills!"
+			dependencies: ["1D0EE40343C794A2"]
+			id: "0D03B7D4AE395A8A"
+			tasks: [{
+				id: "341DDCF0BB637FF2"
+				type: "advancement"
+				advancement: "create:windmill"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "3E65AFA91211E821"
+				type: "item"
+				item: "minecraft:white_wool"
+				count: 16
+			}]
+		}
+		{
+			title: "Working with workouts."
+			x: 5.5d
+			y: -4.0d
+			subtitle: "Everyone's gotta start somewhere, and you decided to choose the worst option. Guess you'll need a few more of these for anything useful..."
+			dependencies: ["1D0EE40343C794A2"]
+			id: "4A61FD06D5837266"
+			tasks: [{
+				id: "5F76FCA42F2BEEFC"
+				type: "item"
+				item: "create:hand_crank"
+			}]
+			rewards: [{
+				id: "10D6BBF7FBB222B1"
+				type: "item"
+				item: "create:hand_crank"
+				count: 3
+			}]
+		}
+		{
+			title: "Bonk indeed."
+			x: 9.5d
+			y: -6.0d
+			subtitle: "One of the first machines you'll make. Used to make pressed items, and can be turned into a compactor using a basin."
+			min_required_dependencies: 1
+			dependencies: [
+				"4A61FD06D5837266"
+				"0D03B7D4AE395A8A"
+				"43DD73EE40BE887B"
+			]
+			id: "6B183693613E826B"
+			tasks: [{
+				id: "050BBD24C749529F"
+				type: "item"
+				item: "create:mechanical_press"
+			}]
+		}
+		{
+			title: "Tunnel Bore"
+			x: 12.0d
+			y: -4.0d
+			subtitle: "Turns rotational energy into breaking energy. Just don't use this to make a cobble farm, okay?"
+			dependencies: ["6B183693613E826B"]
+			id: "4457F3DA5A1654A2"
+			tasks: [{
+				id: "33CB7B023215B47D"
+				type: "item"
+				item: "create:mechanical_drill"
+			}]
+			rewards: [{
+				id: "388640B3C32DDDB4"
+				type: "item"
+				item: "minecraft:andesite"
+				count: 32
+			}]
+		}
+		{
+			title: "A Lazy Lumberjack"
+			x: 11.0d
+			y: -9.0d
+			subtitle: "If a saw cuts the bottommost log of a tree, the entire tree will fall down, letting you quickly mow down forests. When combined with contraptions, this is the best way to farm wood."
+			description: ["When upright, the saw will process items. Use this feature to make certain items more efficiently or automatically, like shafts and planks."]
+			dependencies: ["6B183693613E826B"]
+			id: "1C5854685C8213F9"
+			tasks: [{
+				id: "0DA1A37CFB25B165"
+				type: "item"
+				item: "create:mechanical_saw"
+			}]
+			rewards: [{
+				id: "765C7AE8DCA8CD00"
+				type: "item"
+				item: {
+					id: "minecraft:iron_axe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Honesty or Efficiency?"
+			x: 13.0d
+			y: -5.0d
+			subtitle: "Mechanical harvesters will replant any crop they harvest, letting you easily automate a farm. You could use a rotating windmill, a cart contraption, mechanical pistons, or even a train to use it, so go farm!"
+			dependencies: ["6B183693613E826B"]
+			id: "75F8CE2657DA537D"
+			tasks: [{
+				id: "012D86151B217B21"
+				type: "item"
+				item: "create:mechanical_harvester"
+			}]
+			rewards: [
+				{
+					id: "3F202359F954BFC4"
+					type: "choice"
+					exclude_from_claim_all: true
+					table_id: 1098536404948313478L
+				}
+				{
+					id: "429548C374752EF0"
+					type: "item"
+					item: {
+						id: "minecraft:iron_hoe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Get outta the way!"
+			x: 13.0d
+			y: -7.0d
+			subtitle: "Mechanical ploughs can be used to till dirt, yes, but they can also clear railways or lauch mobs. If you use it correctly, you could build a player cannon to launch yourself into battle!"
+			dependencies: ["6B183693613E826B"]
+			id: "305B3FC2E4EF97D6"
+			tasks: [{
+				id: "779E5A16A1A76C40"
+				type: "item"
+				item: "create:mechanical_plough"
+			}]
+		}
+		{
+			title: "This stuff blows."
+			x: 11.0d
+			y: -3.0d
+			subtitle: "A mechanical fan can be used to make far better mob farms, and is the basis for many material processing factories. Get ready to use these a lot."
+			description: ["(Combine the blowing of the fan with water, lava, or a campfire. Thats how you will process items.)"]
+			dependencies: ["6B183693613E826B"]
+			id: "3792F6A09F0ABD28"
+			tasks: [{
+				id: "2D748F7C1F0F33F2"
+				type: "item"
+				item: "create:encased_fan"
+			}]
+			rewards: [{
+				id: "317E2C1B3C6AC266"
+				type: "item"
+				item: "minecraft:bucket"
+			}]
+		}
+		{
+			title: "Mixing it up."
+			icon: "create:mechanical_mixer"
+			x: 14.5d
+			y: -6.0d
+			shape: "octagon"
+			subtitle: "The mechanical mixer is used for getting all cobble gen resources, and also used for many crafting recipes. This will be used quite a lot, but it gets a lot more complicated when blazeburners are involved."
+			dependencies: ["6B183693613E826B"]
+			size: 1.5d
+			id: "44AA7CDE3059D6A2"
+			tasks: [
+				{
+					id: "6499B045A7D17815"
+					type: "item"
+					item: "create:mechanical_mixer"
+				}
+				{
+					id: "164DFE70833C64CA"
+					type: "item"
+					item: "create:basin"
+				}
+			]
+		}
+		{
+			title: "On a roll."
+			x: 12.0d
+			y: -8.0d
+			subtitle: "The rolling mill is a new processing machine that works simularly to the millstone. This will be used more for electrical applications, so wait till later to get the full use out of this."
+			dependencies: ["6B183693613E826B"]
+			id: "4FAAA229E43F45F6"
+			tasks: [{
+				id: "39E353639B6C5116"
+				type: "item"
+				item: "createaddition:rolling_mill"
+			}]
+		}
+		{
+			title: "Portable what now?"
+			x: 10.5d
+			y: -1.0d
+			subtitle: "The Portable storage interface (PSI), can be used to extract items from contraption entities, like minecart contraptions and trains. I suggest you add multiple of these on large storage contraptions. The more PSI's you have on board, the quicker it will load and offload."
+			dependencies: ["1DF6170C02DF738D"]
+			id: "3F9913AD464F07C2"
+			tasks: [{
+				id: "03A7BD850F570CFE"
+				type: "item"
+				item: "create:portable_storage_interface"
+			}]
+			rewards: [{
+				id: "3B58414C99E86FD2"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+		}
+		{
+			title: "Like hoppers but better in every way."
+			x: 9.0d
+			y: -1.0d
+			subtitle: "Chutes can be used as a faster alternative to hoppers, but struggle in going sideways. They can be combined with a fan to move items upwards."
+			dependencies: ["1DF6170C02DF738D"]
+			id: "71C5E8CABDFFD5DB"
+			tasks: [{
+				id: "146E45DC6639AB75"
+				type: "item"
+				item: "create:chute"
+			}]
+			rewards: [{
+				id: "5266190EA80649CB"
+				type: "item"
+				item: "create:chute"
+				count: 12
+			}]
+		}
+		{
+			title: "Its inedible, I swear!"
+			x: 8.0d
+			y: -2.5d
+			subtitle: "Mechanical belts can be used to tranport items, and also transfer rotation!"
+			min_required_dependencies: 1
+			dependencies: [
+				"4A61FD06D5837266"
+				"0D03B7D4AE395A8A"
+				"43DD73EE40BE887B"
+			]
+			id: "1DF6170C02DF738D"
+			tasks: [{
+				id: "25E277DFFF7BA404"
+				type: "item"
+				item: "create:belt_connector"
+			}]
+			rewards: [{
+				id: "03E8F3690B7B957F"
+				type: "item"
+				item: "minecraft:dried_kelp_block"
+				count: 6
+			}]
+		}
+		{
+			title: "MY EXTRACTINATOR"
+			x: 5.5d
+			y: -1.0d
+			subtitle: "The funnel is used to export or import items from storage blocks. Combine this with belts or depots to move items around."
+			dependencies: ["1DF6170C02DF738D"]
+			id: "797C7025B431A8B9"
+			tasks: [{
+				id: "317EAC9A383F8CF8"
+				type: "item"
+				item: "create:andesite_funnel"
+			}]
+			rewards: [{
+				id: "7DC5C54861C18C01"
+				type: "item"
+				item: "create:andesite_funnel"
+				count: 2
+			}]
+		}
+		{
+			title: "It's not just decorative..."
+			x: 7.0d
+			y: -1.0d
+			subtitle: "The andesite tunnel can be used with a perpendicular belt to split one item off a stack, this could be used in item processing factories. For the most part sadly, this is only used for covering up belts going through walls."
+			dependencies: ["1DF6170C02DF738D"]
+			id: "2A918AA610FE3025"
+			tasks: [{
+				id: "0F0299147150A4D0"
+				type: "item"
+				item: "create:andesite_tunnel"
+			}]
+			rewards: [{
+				id: "7F59EBB3762C2DA4"
+				type: "item"
+				item: "create:belt_connector"
+				count: 5
+			}]
+		}
+		{
+			title: "The casing that encased the case of the encasing case."
+			x: 3.5d
+			y: -8.0d
+			subtitle: "A main crafting material of the create mod. Can also be used to encase certain create machines, like shafts and cogwheels."
+			dependencies: ["1D0EE40343C794A2"]
+			id: "27C4E18A0D8FEA04"
+			tasks: [{
+				id: "3C9932A971E3361E"
+				type: "item"
+				item: "create:andesite_casing"
+				count: 10L
+			}]
+			rewards: [{
+				id: "2C1938B0DF29886C"
+				type: "item"
+				item: "create:andesite_alloy"
+				count: 20
+			}]
+		}
+		{
+			title: "Test out your saw!"
+			x: 13.0d
+			y: -9.5d
+			subtitle: "Go gather some stuff for a house, or just deforest for the hell of it!"
+			dependencies: ["1C5854685C8213F9"]
+			optional: true
+			id: "1C221E9D601F9635"
+			tasks: [{
+				id: "464A3B9103D9D414"
+				type: "item"
+				title: "Any #minecraft:logs"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+				count: 100L
+			}]
+			rewards: [{
+				id: "20CD1504F530C240"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+		}
+		{
+			title: "Would you like a drink?"
+			x: 14.0d
+			y: -8.5d
+			subtitle: "By rolling bamboo, you can create a straw to convert a solid fuel blaze burner into a liquid fuel one. This lets you pump in lava or any other fuel into a burner, and power your appliences easily."
+			dependencies: ["4FAAA229E43F45F6"]
+			optional: true
+			id: "7FE359275AC30248"
+			tasks: [{
+				id: "0C583434C32B857F"
+				type: "item"
+				item: "createaddition:straw"
+			}]
+			rewards: [{
+				id: "6B31F2D3E92EBC16"
+				type: "item"
+				item: "create:fluid_pipe"
+				count: 32
+			}]
+		}
+		{
+			title: "Its honest if you did it happily."
+			x: 15.0d
+			y: -4.5d
+			subtitle: "Go farm for a while, enjoy nature, sell your crops for a profit, who cares?"
+			dependencies: ["75F8CE2657DA537D"]
+			optional: true
+			id: "25FFEEA5F67EABC3"
+			tasks: [{
+				id: "0B324CD572235105"
+				type: "item"
+				title: "Any #forge:crops"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:crops"
+					}
+				}
+				count: 256L
+			}]
+			rewards: [
+				{
+					id: "50FC064EAFC64F56"
+					type: "item"
+					item: "minecraft:bone"
+					count: 64
+				}
+				{
+					id: "7A895DC270F197E1"
+					type: "item"
+					item: "minecraft:cactus"
+				}
+				{
+					id: "3FC2AC7B69846AF2"
+					type: "item"
+					item: "minecraft:bamboo"
+				}
+			]
+		}
+		{
+			title: "What goes up must come down."
+			x: 15.0d
+			y: -7.5d
+			subtitle: "Using a plough is optional here, but if you manage to get this advancement, you deserve an award."
+			dependencies: ["305B3FC2E4EF97D6"]
+			optional: true
+			id: "557CBCC22CABA303"
+			tasks: [{
+				id: "3F1CEBF592912497"
+				type: "advancement"
+				advancement: "minecraft:adventure/fall_from_world_height"
+				criterion: ""
+			}]
+			rewards: [
+				{
+					id: "559876B64F5329E3"
+					type: "item"
+					item: "minecraft:music_disc_otherside"
+				}
+				{
+					id: "3C736960CD500C48"
+					type: "item"
+					item: "minecraft:jukebox"
+				}
+			]
+		}
+		{
+			title: "Tunnel Bore"
+			x: 14.0d
+			y: -3.0d
+			subtitle: "Using a cart contraption, make a tunnel bore that places its own rail, and digs out a tunnel in front of it. If you want a more advanced bore, look up some on YouTube."
+			dependencies: ["4457F3DA5A1654A2"]
+			optional: true
+			id: "3D8CDDAF9C770A0A"
+			tasks: [
+				{
+					id: "6C1E4BA7AFD13B08"
+					type: "item"
+					item: "create:cart_assembler"
+				}
+				{
+					id: "5EAF8EF0AD6C8885"
+					type: "item"
+					item: "create:mechanical_drill"
+					count: 9L
+				}
+				{
+					id: "2D55183DD4DC2E46"
+					type: "item"
+					item: "create:deployer"
+					count: 3L
+				}
+				{
+					id: "6A0510CB99950D36"
+					type: "item"
+					item: "minecraft:rail"
+					count: 64L
+				}
+			]
+			rewards: [
+				{
+					id: "72AEB13D968FAAC6"
+					type: "item"
+					item: "create:red_seat"
+				}
+				{
+					id: "7FE5567B1996247E"
+					type: "item"
+					item: "minecraft:torch"
+					count: 64
+				}
+				{
+					id: "5337A458CFC07B60"
+					type: "item"
+					item: "minecraft:powered_rail"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Free stuff!"
+			x: 13.0d
+			y: -2.0d
+			subtitle: "Using gravel and a washing fan, you can fully automate raw iron nuggets. Go a little further, and you have infinite XP and materials!"
+			dependencies: ["3792F6A09F0ABD28"]
+			optional: true
+			id: "6424C4BDE862EA09"
+			tasks: [{
+				id: "32E811639F3F652C"
+				type: "item"
+				title: "Any #forge:raw_materials"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:raw_materials"
+					}
+				}
+				count: 64L
+			}]
+			rewards: [
+				{
+					id: "4D062BD932A24116"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "46F9C5452B43615D"
+					type: "item"
+					item: "minecraft:grindstone"
+				}
+			]
+		}
+		{
+			title: "Dimension Hopper"
+			x: -2.0d
+			y: -4.5d
+			subtitle: "Traveling to the nether may seem normal, but in this modpack you're going to use it a lot more. I reccomend finding a place and making a path where it is relatively safe."
+			invisible: true
+			id: "13BD884ABDEA0BAE"
+			tasks: [{
+				id: "1041A333F25A8567"
+				type: "dimension"
+				dimension: "minecraft:the_nether"
+			}]
+			rewards: [{
+				id: "4C1F57DA86A60CF6"
+				type: "item"
+				item: {
+					id: "minecraft:splash_potion"
+					Count: 1b
+					tag: {
+						Potion: "minecraft:fire_resistance"
+					}
+				}
+			}]
+		}
+		{
+			title: "Mmm Omlette"
+			x: 0.5d
+			y: -4.5d
+			subtitle: "Hold on to this egg, it has a yummy aura."
+			invisible: true
+			repeatable: true
+			id: "673ACA6C2C386B6F"
+			tasks: [
+				{
+					id: "3228A530D8274F53"
+					type: "item"
+					item: "minecraft:dragon_egg"
+				}
+				{
+					id: "179CB1878E38C853"
+					type: "questsadditions:time"
+					elapsedTime: 3600L
+					gameTime: "game"
+				}
+			]
+			rewards: [{
+				id: "51667F18A71BB98C"
+				type: "item"
+				item: "kubejs:fours_more"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

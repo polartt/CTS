@@ -1,0 +1,1058 @@
+{
+	id: "76E2F0F8668AAAEC"
+	group: ""
+	order_index: 5
+	filename: "the_wall_of_shame"
+	title: "The Wall of Shame."
+	subtitle: ["The Wall of Shame. Complete quests here by... uh... okay well we forgot to let you view them so you'll just have to complete them to see them. Sorry!"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Ooo, thats not gonna buff out."
+			x: -5.0d
+			y: -3.0d
+			subtitle: "Hit something (or someone) with your train. This isn't going to look good on your resume is it?"
+			invisible: true
+			id: "328682A4E928FDBE"
+			tasks: [{
+				id: "0AF4AF5298C7F1B6"
+				type: "advancement"
+				advancement: "create:train_roadkill"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "717B14E08701BABA"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			x: -4.0d
+			y: -4.5d
+			subtitle: "By completing WOS tasks, you'll get profession stubs based on how random the task was. Theres nothing much you can do with your stubs, but they are not renewable. Maybe use them as a currency?"
+			description: ["I bet whoever made these quests has some purpose for these, whoever they are. Maybe go searching for them?"]
+			id: "29BFB59EE93095B3"
+			tasks: [{
+				id: "7050494DFABD7BC4"
+				type: "checkmark"
+				title: "Huh, okay cool."
+			}]
+			rewards: [{
+				id: "4BC2E3DE60068EAB"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "It takes two!"
+			x: -3.0d
+			y: -3.0d
+			subtitle: "This is why I have trust issues."
+			invisible: true
+			id: "04B71D39BB05EC2D"
+			tasks: [{
+				id: "1C282EF45FB3CD88"
+				type: "advancement"
+				title: "Horrible Service!"
+				advancement: "create:train_crash"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "00AF2AC57506BDBC"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "MY MEN"
+			x: -1.0d
+			y: -3.0d
+			subtitle: "Was that a missclick or a joke? Whatever it is, here you go!"
+			invisible: true
+			id: "53803C5092F24E50"
+			tasks: [{
+				id: "510A6C8AAE7B640D"
+				type: "item"
+				item: "chipped:unamused_diorite"
+				count: 64L
+			}]
+			rewards: [{
+				id: "0C4DCFD9038C5540"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "They're all mine!"
+			x: -3.0d
+			y: -4.5d
+			subtitle: "Y'know, what if you started collecting these as some valuable currency? If so, maybe telling people how to get the stubs isn't the best idea..."
+			dependencies: ["29BFB59EE93095B3"]
+			id: "45AF68D552C6A8FE"
+			tasks: [{
+				id: "6374DAA803B8A5E0"
+				type: "checkmark"
+				title: "Fine. But only cause you said so!"
+			}]
+			rewards: [{
+				id: "2F367453F0391D39"
+				type: "item"
+				item: {
+					id: "minecraft:paper"
+					Count: 1b
+					tag: {
+						HideFlags: 1
+						display: {
+							Lore: [
+								"[{\"text\":\"If you tell anyone how you got those stubs, i'll personally eat your machines.\",\"italic\":false}]"
+								"[{\"text\":\"-Quest Creator\",\"italic\":false}]"
+							]
+							Name: "[{\"text\":\"Vow of Secrecy\",\"italic\":false}]"
+						}
+						Enchantments: [{
+							lvl: 1
+							id: "loyalty"
+						}]
+					}
+				}
+			}]
+		}
+		{
+			title: "Eww... Its all mixing around in there."
+			x: -1.0d
+			y: -6.0d
+			subtitle: "Watch as two fluids reach eachother in a pipe network, the most terrifing reunion."
+			invisible: true
+			id: "2D459E1E022C2A28"
+			tasks: [{
+				id: "70555F4779B1B280"
+				type: "advancement"
+				advancement: "create:cross_streams"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "08DCE4C346BD9D2E"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "You arn't you when you're hungry."
+			x: -3.0d
+			y: -6.0d
+			subtitle: "So, did you make a candy factory? Was this a gift from a friend, a purchase? Whatever the case, heres your stub."
+			invisible: true
+			id: "74D1A9197B416D03"
+			tasks: [{
+				id: "41284042B763F37A"
+				type: "item"
+				item: "create_confectionery:chocolate_candy"
+				count: 32L
+			}]
+			rewards: [{
+				id: "3515B3AAF483B46D"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "I think that makes you a registered criminal now. Congrats!"
+			x: -5.0d
+			y: -6.0d
+			subtitle: "Why? Why would you? What did you gain? I'm hoping theres a good reason behind this."
+			invisible: true
+			id: "294708587A3014CF"
+			tasks: [{
+				id: "2C002CB71A1522F1"
+				type: "stat"
+				stat: "minecraft:player_kills"
+				value: 10
+			}]
+			rewards: [{
+				id: "07B039B0E080875C"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 3
+			}]
+		}
+		{
+			title: "WOOO TIME TO PARTY"
+			x: -5.0d
+			y: -7.5d
+			subtitle: "Wow you must really like music, or keep looping it."
+			invisible: true
+			id: "5946F6227D7AD910"
+			tasks: [{
+				id: "1D237314D2C53F82"
+				type: "stat"
+				icon: "minecraft:music_disc_otherside"
+				stat: "minecraft:play_record"
+				value: 10
+			}]
+			rewards: [{
+				id: "710A0764E730E103"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Why do you need both?"
+			x: -3.0d
+			y: -7.5d
+			subtitle: "You can't make an ultra whisk, however this is a very good lesson!"
+			invisible: true
+			id: "7DA331E35C513A66"
+			tasks: [
+				{
+					id: "4A96D6B3E94256C8"
+					type: "item"
+					item: "kubejs:steel_whisk"
+				}
+				{
+					id: "3720C35DCFEC7FA8"
+					type: "item"
+					item: "create:whisk"
+				}
+			]
+			rewards: [{
+				id: "2A28388A698C866D"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Still, why both?"
+			x: -1.0d
+			y: -7.5d
+			subtitle: "Why do you need both propellers? You already have one, just stick to it!"
+			invisible: true
+			id: "485277B94DAF7EC7"
+			tasks: [
+				{
+					id: "054B00FE86865902"
+					type: "item"
+					item: "kubejs:steel_propeller"
+				}
+				{
+					id: "1DFD3D1154C1B11B"
+					type: "item"
+					item: "create:propeller"
+				}
+			]
+			rewards: [{
+				id: "03F84CBADA365E92"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Heh nice"
+			x: -7.0d
+			y: -7.5d
+			subtitle: "Not only have you not died, you've acquired such a large number of levels! Or did you have an xp farm..."
+			invisible: true
+			id: "2E84F607E87A7D3F"
+			tasks: [{
+				id: "7970A4EC01CC719A"
+				type: "xp"
+				value: 69L
+				points: false
+			}]
+			rewards: [{
+				id: "66D558B7F1D14179"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 4
+			}]
+		}
+		{
+			title: "Thats tuff."
+			x: -7.0d
+			y: -6.0d
+			subtitle: "Why did you have 9 stacks of tuff???? How much ash did this take????"
+			invisible: true
+			id: "1AD599F477DDC4D1"
+			tasks: [{
+				id: "4111D037A165E0D7"
+				type: "item"
+				item: "minecraft:tuff"
+				count: 576L
+			}]
+			rewards: [{
+				id: "2703D5C967333ADC"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 3
+			}]
+		}
+		{
+			title: "I don unernand"
+			x: -5.0d
+			y: -4.5d
+			subtitle: "Why do you have so many mechanisms? What monster of a creation needs 64 MECHANISMS?!"
+			invisible: true
+			id: "287A98D08A1DD52A"
+			tasks: [{
+				id: "10B8964FB75DF292"
+				type: "item"
+				item: "create:precision_mechanism"
+				count: 64L
+			}]
+			rewards: [{
+				id: "5F7B5ECC1983EA18"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "The wise one."
+			x: -1.0d
+			y: -4.5d
+			subtitle: "Shh... they're sleeping. "
+			invisible: true
+			id: "102489CE7BF75DDD"
+			tasks: [{
+				id: "6A934A5A8C8707EA"
+				type: "item"
+				item: "chipped:wise_stripped_oak_log"
+				count: 64L
+			}]
+			rewards: [{
+				id: "4554E4304C09AE8E"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Thats not very vegan of you."
+			x: -7.0d
+			y: -4.5d
+			subtitle: "Although I can see the use, did it have to come to this?"
+			invisible: true
+			id: "392D15CD64BDD7A8"
+			tasks: [{
+				id: "42E1C0534FD95F84"
+				type: "advancement"
+				advancement: "create:honey_drain"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "660099385AFE5763"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Wow. Just wow."
+			x: -7.0d
+			y: -3.0d
+			subtitle: "Well arn't you special! You spent one of the most valuable resources in the game on a knife, the same knife you already used a diamond on. You better use it well."
+			invisible: true
+			id: "6720D0368766467E"
+			tasks: [{
+				id: "4324ECA2CCDD5B12"
+				type: "advancement"
+				advancement: "farmersdelight:main/obtain_netherite_knife"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "7DB05E883A394E77"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Lag hater or advancement hunter?"
+			x: 1.0d
+			y: -7.5d
+			subtitle: "Well, whichever it is, you still have a purple trashcan to use."
+			invisible: true
+			id: "30847AC96A71BA68"
+			tasks: [{
+				id: "12509524A7FD5C10"
+				type: "advancement"
+				advancement: "trashcans:ultimate_trash_can"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "5B85AB5425F0CEC4"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Mmm Fluid."
+			x: 1.0d
+			y: -6.0d
+			subtitle: "Great idea, drinking from that... thing."
+			invisible: true
+			id: "13A49B7B23DD33FF"
+			tasks: [{
+				id: "6FB710458F90429B"
+				type: "advancement"
+				advancement: "supplementaries:nether/goblet"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "75B0989D5D9812DF"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Portable Angels"
+			x: 1.0d
+			y: -4.5d
+			subtitle: "This is an angel block for the most part."
+			invisible: true
+			id: "6DF3CB3D75B04767"
+			tasks: [{
+				id: "61F5B8DC434E97B3"
+				type: "advancement"
+				advancement: "quark:get_bottled_cloud"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "7B1282F7E39EB6DE"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "It spreads."
+			x: 1.0d
+			y: -3.0d
+			subtitle: "If you have this advancement, you are most likely also rainbow right now. Oops!"
+			invisible: true
+			id: "365B6FF49EF370BB"
+			tasks: [{
+				id: "154FAD1956CE9367"
+				type: "advancement"
+				advancement: "alexsmobs:alexsmobs/rainbow_jelly"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "58432CB643DDCE63"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Silliness"
+			x: 1.0d
+			y: -1.5d
+			subtitle: "You could make a religion out of this!"
+			invisible: true
+			id: "3F5C5D823D58D42E"
+			tasks: [{
+				id: "2493CFD41FDD6437"
+				type: "advancement"
+				advancement: "alexsmobs:alexsmobs/la_cucaracha"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "277A5E18EA5F19DB"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Wow! Healthy and Dangerous!"
+			x: -1.0d
+			y: -1.5d
+			subtitle: "If you don't know what you and someone else just did, you hit two potato cannon projectiles together to create the most wonderful cross of power and vegetable."
+			invisible: true
+			id: "4BDE0E7A7D835085"
+			tasks: [{
+				id: "1C3DA5B2D3D0B626"
+				type: "advancement"
+				advancement: "create:potato_cannon_collide"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "637C9369E72C4BD6"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 3
+			}]
+		}
+		{
+			title: "You tried so hard, yet still failed."
+			x: -3.0d
+			y: -1.5d
+			subtitle: "You went through all the effort to use train signals, and then ignored them!"
+			invisible: true
+			id: "0C1A2F6AE4630276"
+			tasks: [{
+				id: "093029AD0273EB39"
+				type: "advancement"
+				advancement: "create:red_signal"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "1960AE6274D95D73"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "It's, beautiful!"
+			x: -5.0d
+			y: -1.5d
+			subtitle: "Woah, be careful there pal, that thing's dangerous."
+			invisible: true
+			id: "7C02B72E3FCD2332"
+			tasks: [{
+				id: "6A4A64A992E63522"
+				type: "item"
+				item: "kubejs:fours_more"
+			}]
+			rewards: [{
+				id: "5500D9C5FCF88A83"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Certified Hashbrown Moment"
+			x: -7.0d
+			y: -1.5d
+			subtitle: "This is a certified hashbrown moment."
+			invisible: true
+			id: "1E906E92907C9E63"
+			tasks: [{
+				id: "64DEB0BADA31B0D0"
+				type: "item"
+				item: "kubejs:incomplete_barrel"
+			}]
+			rewards: [{
+				id: "7A323E719E351F66"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			x: -2.0d
+			y: -4.5d
+			subtitle: "The only thing holding (Quest Creator) back from creating more WOS quests is ideas. Feel free to post quest ideas somewhere in the CTS discord with \"WOS IDEA\" in the message. Who knows, your idea might be added?"
+			dependencies: ["45AF68D552C6A8FE"]
+			id: "768D6340A7260D3A"
+			tasks: [{
+				id: "39BE6F5CD4EFD2A3"
+				type: "checkmark"
+				title: "There's always room for more."
+			}]
+			rewards: [{
+				id: "4C0E4E972457C832"
+				type: "item"
+				item: "minecraft:cookie"
+			}]
+		}
+		{
+			title: "Wha... WHY?? WHY WOULD YOU??"
+			disable_toast: true
+			x: 13.5d
+			y: -17.0d
+			shape: "gear"
+			subtitle: "Well, this is very, very, awkward. You've filled every slot in your inventory with extendogrips. For what reason? What did you gain? WHY. Well, you've managed to do the most random thing here, and for that, you've earned my most prized artifact. You monster."
+			optional: true
+			invisible: true
+			id: "24719E538B24448A"
+			tasks: [{
+				id: "2D6926F4F8F17465"
+				type: "item"
+				item: {
+					id: "create:extendo_grip"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				count: 36L
+			}]
+			rewards: [
+				{
+					id: "34FE49E2E9A07243"
+					type: "item"
+					item: {
+						id: "create:extendo_grip"
+						Count: 1b
+						tag: {
+							Unbreakable: 1
+							HideFlags: 1
+							Enchantments: [{
+								lvl: 5
+								id: "knockback"
+							}]
+							display: {
+								Lore: ["[{\"text\":\"\\\"And if that don't work, use more extendo-grip.\\\"\",\"italic\":false}]"]
+								Name: "[{\"text\":\"The Extended Grip\",\"italic\":false}]"
+							}
+							Damage: 0
+							AttributeModifiers: [{
+								AttributeName: "generic.movement_speed"
+								UUID: [I;
+									-123329
+									21550
+									1046
+									-43100
+								]
+								Amount: 0.2d
+								Name: "generic.movement_speed"
+							}]
+						}
+					}
+				}
+				{
+					id: "4D4CFFC87D259EB7"
+					type: "item"
+					item: "kubejs:profession_stub"
+					count: 5
+				}
+			]
+		}
+		{
+			title: "What took you so long?"
+			x: 3.0d
+			y: -7.5d
+			subtitle: "Tell me, what was worse. Building the train line, or spending the 10 minutes riding it?"
+			invisible: true
+			id: "78DAE51B808175B2"
+			tasks: [{
+				id: "6BFA248EC36A1B5A"
+				type: "advancement"
+				advancement: "create:long_travel"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "7EEDE4454AD8C175"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Boo womp"
+			x: 3.0d
+			y: -6.0d
+			subtitle: "Huh, I thought that would work too."
+			invisible: true
+			id: "540401432750D4E7"
+			tasks: [{
+				id: "1A78859A3F072BA9"
+				type: "advancement"
+				advancement: "create:diving_suit_lava"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "0CDCFA1606D5DFE2"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "HAHA POOR"
+			x: 3.0d
+			y: -4.5d
+			subtitle: "Wow, the lowest of lows. Instead of making a small windmill or a few water wheels, you decided to just slow down the crafters. Real original I know."
+			invisible: true
+			id: "64DB076A056A3C71"
+			tasks: [{
+				id: "100F503378D76136"
+				type: "advancement"
+				advancement: "create:crafter_lazy_000"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "4027907AF4BE564D"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "How experienced though?"
+			x: 3.0d
+			y: -3.0d
+			subtitle: "Wow, this must've taken a while. First you had to farm the xp, then waste your days away on a recycler. Oh well!"
+			invisible: true
+			id: "394B46A182F5E0B5"
+			tasks: [{
+				id: "39F73FC555BFAA1D"
+				type: "advancement"
+				advancement: "create_enchantment_industry:experienced_recycler"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "60446B110CE69854"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "And nobody will read them ):"
+			x: 3.0d
+			y: -1.5d
+			subtitle: "You've impressed me. Getting the 1000 books was hard wasnt it."
+			invisible: true
+			id: "11A82004E8668077"
+			tasks: [{
+				id: "329433E71920A9E5"
+				type: "advancement"
+				advancement: "create_enchantment_industry:great_publisher"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "2FF1CB06F300FD07"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 3
+			}]
+		}
+		{
+			title: "The poor mans trim."
+			x: -9.0d
+			y: -1.5d
+			subtitle: "Cool people use rainbow jelly. And cooler people realize that the rainbow jelly advancement and this advancement are the same."
+			invisible: true
+			id: "5B87473E5F399DC7"
+			tasks: [{
+				id: "736AEE9A66198641"
+				type: "advancement"
+				advancement: "quark:wear_full_rainbow"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "1E6983782D26C414"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Animal crulety much?"
+			x: -9.0d
+			y: -4.5d
+			subtitle: "At least they'll look adorable for ever."
+			invisible: true
+			id: "0C4EE7C103049D93"
+			tasks: [{
+				id: "1E461B9A331FC8C6"
+				type: "advancement"
+				advancement: "quark:posion_baby"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "32B3ACB2803430C1"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "If only ):"
+			x: -9.0d
+			y: -3.0d
+			subtitle: "There used to be an edible moss item, there now is not. ):"
+			invisible: true
+			id: "0638FF8258EB1F63"
+			tasks: [
+				{
+					id: "1ACCCC95E47E47FD"
+					type: "item"
+					item: "minecraft:moss_block"
+				}
+				{
+					id: "4AEB2E789ADC3D05"
+					type: "item"
+					item: "minecraft:enchanted_golden_apple"
+				}
+			]
+			rewards: [{
+				id: "76D4F08E4AD7465E"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Munchies"
+			x: -9.0d
+			y: -6.0d
+			subtitle: "Damn, did you already have the levels or did you eat the fruits for it?"
+			invisible: true
+			id: "6B562F61A036592C"
+			tasks: [{
+				id: "16A16749B9B36D73"
+				type: "advancement"
+				advancement: "quark:ancient_apple_overlevel"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "72C72FD17F6AE910"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Fatty"
+			x: -9.0d
+			y: -7.5d
+			subtitle: "What took longer, making the food or eating it!"
+			invisible: true
+			id: "12448A1B89216486"
+			tasks: [{
+				id: "5D39D77BAC495ACA"
+				type: "advancement"
+				advancement: "farmersdelight:main/master_chef"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "7926A248B79672C4"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Honest'er Work"
+			x: 5.0d
+			y: -7.5d
+			subtitle: "Was this by accident or are you a really dedicated farmer?"
+			invisible: true
+			id: "22CA05C6BC3E7045"
+			tasks: [{
+				id: "11C7B200C3AE836A"
+				type: "advancement"
+				advancement: "farmersdelight:main/plant_all_crops"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "0AAC0C8F880E7F98"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "So no head?"
+			x: 5.0d
+			y: -6.0d
+			subtitle: "The most grusome set piece."
+			invisible: true
+			id: "4C0243435B6A6DC7"
+			tasks: [{
+				id: "3FC07F331711F896"
+				type: "advancement"
+				advancement: "quark:get_own_head"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "7E19320E7319AC72"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Yea, you've been naughty."
+			x: 5.0d
+			y: -4.5d
+			subtitle: "(No inuendos here keep looking)"
+			invisible: true
+			id: "17A8D0EF11311F37"
+			tasks: [{
+				id: "1D480A1C3479C2D2"
+				type: "advancement"
+				advancement: "spelunkery:spelunkery/coal_lump"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "433EE9CC938EAC7F"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Advancement hunter."
+			x: 5.0d
+			y: -3.0d
+			subtitle: "Now you get something out of doing the worst thing possible, horray!"
+			invisible: true
+			id: "465DF32D531BCD3F"
+			tasks: [{
+				id: "66309B45F4A32C88"
+				type: "advancement"
+				advancement: "supplementaries:story/unenchanter"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "44E56C5D6FA6DA90"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "NO NO NO, WAIT WAIT WAIT WAIT"
+			x: 5.0d
+			y: -1.5d
+			subtitle: "DONT EVEN THINK ABOUT DOING IT"
+			invisible: true
+			id: "702426AD74A8655F"
+			tasks: [
+				{
+					id: "2D89CDF40BD0A38E"
+					type: "item"
+					item: "minecraft:end_rod"
+				}
+				{
+					id: "1A43647522ABA434"
+					type: "item"
+					item: "minecraft:sticky_piston"
+				}
+			]
+			rewards: [{
+				id: "7F4B7E9BE6CF7AC9"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Bad! Bad! Bad!"
+			x: -11.0d
+			y: -1.5d
+			subtitle: "Just use the create ones. ):"
+			invisible: true
+			id: "2B2854439622A4CD"
+			tasks: [{
+				id: "40968500BA4C5411"
+				type: "item"
+				title: "Any #quark:stools"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "quark:stools"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "340C7B51A380C86F"
+					type: "item"
+					item: "kubejs:profession_stub"
+				}
+				{
+					id: "197C2B90319D85DB"
+					type: "item"
+					item: "create:red_seat"
+				}
+			]
+		}
+		{
+			title: "Completely useless"
+			x: -11.0d
+			y: -3.0d
+			subtitle: "As all things should be"
+			invisible: true
+			id: "6C0B2B5519E7FAB5"
+			tasks: [
+				{
+					id: "4CB6352C4F18BB69"
+					type: "item"
+					item: "railways:benchcart"
+				}
+				{
+					id: "711F0AE6BCED7FE4"
+					type: "item"
+					item: "railways:jukeboxcart"
+				}
+				{
+					id: "06FF4D679066CDE4"
+					type: "item"
+					item: "supplementaries:dispenser_minecart"
+				}
+			]
+			rewards: [{
+				id: "0CBFC9572E7E2DDF"
+				type: "item"
+				item: "kubejs:profession_stub"
+				count: 2
+			}]
+		}
+		{
+			title: "Bacon Pancakes"
+			x: -11.0d
+			y: -4.5d
+			subtitle: "Cause thats what you're gonna make"
+			invisible: true
+			id: "67FFF294AD18CB57"
+			tasks: [
+				{
+					id: "056AB5A2EA52AD5D"
+					type: "item"
+					item: "farmersdelight:cooked_bacon"
+				}
+				{
+					id: "2E80D88BD60CDA6C"
+					type: "item"
+					item: "supplementaries:pancake"
+				}
+			]
+			rewards: [{
+				id: "312C08CC89369DCA"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Wrong"
+			x: -11.0d
+			y: -6.0d
+			subtitle: "Boo womp"
+			id: "2E96AEB8F5EC6E01"
+			tasks: [{
+				id: "25BA1DEA39518C76"
+				type: "item"
+				item: {
+					id: "supplementaries:wrench"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "1271FDBD86277DDB"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+		{
+			title: "Tomato sauce. I promise."
+			x: -11.0d
+			y: -7.5d
+			subtitle: "Yummy"
+			invisible: true
+			id: "5CA55F36FF2C7696"
+			tasks: [{
+				id: "3B740213E45E74F6"
+				type: "item"
+				item: "create_central_kitchen:tomato_sauce_bucket"
+			}]
+			rewards: [{
+				id: "0EA52E66D0768AFF"
+				type: "item"
+				item: "kubejs:profession_stub"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

@@ -1,18 +1,18 @@
 {
-	id: "323FB3DAC9817740"
-	order_index: 5
-	title: "Tuff package."
 	icon: "minecraft:bundle"
+	id: "323FB3DAC9817740"
 	loot_size: 1
+	order_index: 5
 	rewards: [
-		{ item: "minecraft:tuff", count: 20, weight: 25.0f }
-		{ item: "spelunkery:tuff_coal_ore", count: 5, weight: 1.3f }
-		{ item: "spelunkery:tuff_iron_ore", count: 4, weight: 1.5f }
-		{ item: "spelunkery:tuff_zinc_ore", count: 4, weight: 1.75f }
-		{ item: "spelunkery:tuff_copper_ore", count: 13, weight: 2.0f }
-		{ item: "spelunkery:tuff_gold_ore", count: 2 }
-		{ item: "spelunkery:tuff_redstone_ore", count: 4, weight: 2.0f }
-		{ item: "spelunkery:tuff_lapis_ore", count: 3 }
+		{ count: 20, item: "minecraft:tuff", weight: 25.0f }
+		{ count: 5, item: "spelunkery:tuff_coal_ore", weight: 1.3f }
+		{ count: 4, item: "spelunkery:tuff_iron_ore", weight: 1.5f }
+		{ count: 4, item: "spelunkery:tuff_zinc_ore", weight: 1.75f }
+		{ count: 13, item: "spelunkery:tuff_copper_ore", weight: 2.0f }
+		{ count: 2, item: "spelunkery:tuff_gold_ore" }
+		{ count: 4, item: "spelunkery:tuff_redstone_ore", weight: 2.0f }
+		{ count: 3, item: "spelunkery:tuff_lapis_ore" }
 		{ item: "spelunkery:tuff_diamond_ore", weight: 0.1f }
 	]
+	title: "Tuff package."
 }

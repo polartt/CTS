@@ -1,21 +1,21 @@
 {
 	id: "2783FADFD0270CF9"
-	order_index: 7
-	title: "Exploration Care Package"
 	loot_size: 1
+	order_index: 7
 	rewards: [
-		{ item: "minecraft:torch", count: 16, weight: 10.0f }
-		{ item: "create:sweet_roll", count: 12, weight: 10.0f }
-		{ item: "create:track", count: 16, weight: 3.0f }
-		{ item: "minecraft:andesite", count: 8, weight: 5.0f }
-		{ item: "minecraft:oak_log", count: 12, weight: 5.0f }
-		{ item: "minecraft:bone", count: 3, weight: 5.0f }
-		{ item: "minecraft:raw_iron", count: 3, weight: 2.0f }
+		{ count: 16, item: "minecraft:torch", weight: 10.0f }
+		{ count: 12, item: "create:sweet_roll", weight: 10.0f }
+		{ count: 16, item: "create:track", weight: 3.0f }
+		{ count: 8, item: "minecraft:andesite", weight: 5.0f }
+		{ count: 12, item: "minecraft:oak_log", weight: 5.0f }
+		{ count: 3, item: "minecraft:bone", weight: 5.0f }
+		{ count: 3, item: "minecraft:raw_iron", weight: 2.0f }
 		{ item: "minecraft:raw_gold", weight: 2.0f }
 		{ item: "minecraft:raw_copper_block", weight: 2.0f }
-		{ item: "create:raw_zinc", count: 2, weight: 2.0f }
-		{ item: "create:cogwheel", count: 2, weight: 4.0f }
+		{ count: 2, item: "create:raw_zinc", weight: 2.0f }
+		{ count: 2, item: "create:cogwheel", weight: 4.0f }
 		{ item: "create:large_cogwheel", weight: 4.0f }
-		{ item: "create:brass_nugget", count: 3, weight: 1.5f }
+		{ count: 3, item: "create:brass_nugget", weight: 1.5f }
 	]
+	title: "Exploration Care Package"
 }

@@ -4,9 +4,11 @@ console.info("Recipes")
 ServerEvents.recipes(event => {
 	event.shapeless(KJ("fine_sand_bucket"), [KJ("sand_ball"), MC("bucket")])
 
-	event.recipes.createoreexcavation.drilling(MC("ancient_debris"), `{"text": "Ancient Debris Mining"}`, 10, 100).drill(COE("netherite_drill")).fluid({"fluid": CEI("hyper_experience"), "amount": 1}).veinSize(1, 5).biomeWhitelist(F("is_nether")).stress(1024).id("ancient_debris");
+	event.recipes.createoreexcavation.drilling([Item.of(MC("ancient_debris")).withChance(0.1)], `{"text": "Ancient Debris"}`, 1, 1800).drill(COE("netherite_drill")).fluid({"fluid": CEI("hyper_experience"), "amount": 1}).veinSize(1, 5).biomeWhitelist(MC("is_nether")).stress(1024).id("ancient_debris");
 
-	event.recipes.createoreexcavation.drilling(COE("raw_diamond"), `{"text": "Diamond Mining"}`, 10, 100).drill(COE("netherite_drill")).fluid({"fluid": CEI("experience"), "amount": 50}).veinSize(2, 10).biomeWhitelist(F("is_overworld")).stress(1024).id("diamond");
+	event.recipes.createoreexcavation.drilling([Item.of(COE("raw_diamond")).withChance(0.1)], `{"text": "Diamond"}`, 5, 1200).drill(COE("netherite_drill")).fluid({"fluid": CEI("experience"), "amount": 50}).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(1024).id("diamond");
+
+	event.recipes.createoreexcavation.drilling(MC("lapis_ore"), `{"text": "Lapis"}`, 10, 100).fluid({"fluid": MC("water"), "amount": 1000}).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(512).id("lapis");
 
 	event.custom(Emptying([Item.of(MC("slime_ball"))], [{ "fluid": KJ("slime"), "amount": 100 }]))
 

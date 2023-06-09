@@ -1,50 +1,50 @@
 {
-	id: "3B350C4DE5B85552"
-	order_index: 1
-	title: "Company Deployment Kits"
 	icon: "create:brown_toolbox"
+	id: "3B350C4DE5B85552"
 	loot_size: 3
+	order_index: 1
 	rewards: [
-		{ title: "Inventory Management", item: "supplementaries:sack", count: 2 }
-		{ title: "Star Cook", item: "farmersdelight:cooking_pot" }
-		{ title: "Station Starter", item: "create:track", count: 64 }
-		{ title: "I <3 Create", item: "create:andesite_alloy", count: 32 }
-		{ title: "Afraid of the sea...", item: "minecraft:kelp", count: 16 }
+		{ count: 2, item: "supplementaries:sack", title: "Inventory Management" }
+		{ item: "farmersdelight:cooking_pot", title: "Star Cook" }
+		{ count: 64, item: "create:track", title: "Station Starter" }
+		{ count: 32, item: "create:andesite_alloy", title: "I <3 Create" }
+		{ count: 16, item: "minecraft:kelp", title: "Afraid of the sea..." }
 		{
-			title: "Teach a man to fish..."
 			item: {
+				Count: 1b
 				id: "alloyed:steel_fishing_rod"
-				Count: 1b
 				tag: {
 					Damage: 0
 				}
 			}
+			title: "Teach a man to fish..."
 		}
-		{ title: "Give a man a fish...", item: "minecraft:cooked_cod", count: 32 }
-		{ title: "Afraid of the dark.", item: "spelunkery:yellow_glowstick", count: 48 }
-		{ title: "Stick to the basics.", item: "minecraft:slime_ball" }
-		{ title: "A wise choice.", item: "minecraft:oak_log", count: 64 }
-		{ title: "Straight from the bloodstream.", item: "minecraft:raw_iron", count: 32 }
-		{ title: "\"Would you kindly?\"", item: "create:wrench" }
-		{ title: "Visible Stress.", item: "create:goggles" }
+		{ count: 32, item: "minecraft:cooked_cod", title: "Give a man a fish..." }
+		{ count: 48, item: "spelunkery:yellow_glowstick", title: "Afraid of the dark." }
+		{ item: "minecraft:slime_ball", title: "Stick to the basics." }
+		{ count: 64, item: "minecraft:oak_log", title: "A wise choice." }
+		{ count: 32, item: "minecraft:raw_iron", title: "Straight from the bloodstream." }
+		{ item: "create:wrench", title: "\"Would you kindly?\"" }
+		{ item: "create:goggles", title: "Visible Stress." }
 		{
-			title: "A formidible weapon."
 			item: {
+				Count: 1b
 				id: "simplyswords:sword_on_a_stick"
-				Count: 1b
 				tag: {
 					Damage: 0
 				}
 			}
+			title: "A formidible weapon."
 		}
 		{
-			title: "Rhymes with home."
+			count: 16
 			item: {
-				id: "spelunkery:portal_fluid_bottle"
 				Count: 1b
+				id: "spelunkery:portal_fluid_bottle"
 				tag: { }
 			}
-			count: 16
+			title: "Rhymes with home."
 		}
 	]
+	title: "Company Deployment Kits"
 }

@@ -1590,7 +1590,7 @@
 	"Overlay Shader" = false
 	"Narrator Readout" = false
 	"Game Nerfs" = false
-	"Enchantments Begone" = false
+	"Enchantments Begone" = true
 	"Adjustable Chat" = false
 	#This feature generates Resource Pack Item Model predicates on the items defined in 'Items to Change'
 	#for the Enchantments defined in 'Enchantments to Register'.
@@ -1631,7 +1631,7 @@
 		"Elytra Allowed Dimensions" = ["minecraft:the_end"]
 
 	[experimental.enchantments_begone]
-		"Enchantments To Begone" = []
+		"Enchantments To Begone" = ["aileron:smokestack"]
 
 	[experimental.adjustable_chat]
 		"Horizontal Shift" = 0

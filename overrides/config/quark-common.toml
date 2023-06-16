@@ -1631,7 +1631,7 @@
 		"Elytra Allowed Dimensions" = ["minecraft:the_end"]
 
 	[experimental.enchantments_begone]
-		"Enchantments To Begone" = ["aileron:smokestack"]
+		"Enchantments To Begone" = ["aileron:smokestack", "aileron:cloudskipper"]
 
 	[experimental.adjustable_chat]
 		"Horizontal Shift" = 0

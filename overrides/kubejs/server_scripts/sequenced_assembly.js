@@ -33,16 +33,6 @@ ServerEvents.recipes(event => {
 	))
 
 	event.custom(SequencedAssembly(
-		Item.of("#quark:hollow_logs"),
-		Item.of(KJ("incomplete_barrel")),
-		[
-			Deploying([Item.of(KJ("incomplete_barrel")), Item.of("#minecraft:wooden_slabs")], [Item.of(KJ("incomplete_barrel"))])
-		],
-		[Item.of(MC("barrel"))],
-		2
-	))
-
-	event.custom(SequencedAssembly(
 		Item.of(MC("diamond")),
 		Item.of(KJ("incomplete_heart_of_diamond")),
 		[
@@ -73,7 +63,7 @@ ServerEvents.recipes(event => {
 
 	event.custom(SequencedAssembly(
 		Item.of(C("iron_sheet")),
-		Item.of(KJ("")),
+		Item.of(KJ("incomplete_super_glue")),
 		[
 			Filling([Item.of(KJ("incomplete_super_glue")), {"fluid": KJ("slime"), "amount": 100}], [Item.of(KJ("incomplete_super_glue"))]),
 			Pressing([Item.of(KJ("incomplete_super_glue"))], [Item.of(KJ("incomplete_super_glue"))])
@@ -91,24 +81,75 @@ ServerEvents.recipes(event => {
 				Deploying([Item.of(RW(`track_incomplete_${material}`)), Item.of(nugget)], [Item.of(RW(`track_incomplete_${material}`))]),
 				Pressing([Item.of(RW(`track_incomplete_${material}`))], [Item.of(RW(`track_incomplete_${material}`))])
 			],
-			[Item.of(`2x ${RW(`track_incomplete_${material}`)}`)],
+			[Item.of(`2x ${RW(`track_${material}`)}`)],
 			1
 		))
 	}
 
-	// ["acacia", "birch", "dark_oak", "jungle", "oak", "spruce", "mangrove"].map(wood => MakeRailways(wood, A("steel_nugget")))
-	// ["crimson", "warped", "blackstone"].map(wood => MakeRailways(wood, A("bronze_nugget")))
+	const steel = ["acacia", "birch", "dark_oak", "jungle", "oak", "spruce", "mangrove"]
+	const bronze = ["crimson", "warped", "blackstone"]
 
-	// event.custom(SequencedAssembly(
-	// 	Item.of(C("metal_girder")),
-	// 	Item.of(RW("track_incomplete_monorail")),
-	// 	[
-	// 		Deploying([Item.of(RW("track_incomplete_monorail")), Item.of(C("metal_bracket"))], [Item.of(RW("track_incomplete_monorail"))]),
-	// 		Deploying([Item.of(RW("track_incomplete_monorail")), Item.of(A("steel_sheet"))], [Item.of(RW("track_incomplete_monorail"))]),
-	// 		Pressing([Item.of(RW("track_incomplete_monorail"))], [Item.of(RW("track_incomplete_monorail"))])
-	// 	],
-	// 	Item.of("12x railways:track_monorail"),
-	// 	1
-	// ))
+	steel.map(wood => MakeRailways(wood, A("steel_nugget")))
+	bronze.map(wood => MakeRailways(wood, A("bronze_nugget")))
+
+	event.custom(SequencedAssembly(
+		Item.of(MC("phantom_membrane")),
+		Item.of(RW(`track_incomplete_phantom`)),
+		[
+			Deploying([Item.of(RW(`track_incomplete_phantom`)), Item.of(A("steel_nugget"))], [Item.of(RW(`track_incomplete_phantom`))]),
+			Deploying([Item.of(RW(`track_incomplete_phantom`)), Item.of(A("steel_nugget"))], [Item.of(RW(`track_incomplete_phantom`))]),
+			Pressing([Item.of(RW(`track_incomplete_phantom`))], [Item.of(RW(`track_incomplete_phantom`))])
+		],
+		[Item.of(`64x ${RW(`track_phantom`)}`)],
+		1
+	))
+
+	event.custom(SequencedAssembly(
+		Item.of(`#${C("sleepers")}`),
+		Item.of(C(`incomplete_track`)),
+		[
+			Deploying([Item.of(C(`incomplete_track`)), Item.of(A("steel_nugget"))], [Item.of(C(`incomplete_track`))]),
+			Deploying([Item.of(C(`incomplete_track`)), Item.of(A("steel_nugget"))], [Item.of(C(`incomplete_track`))]),
+			Pressing([Item.of(C(`incomplete_track`))], [Item.of(C(`incomplete_track`))])
+		],
+		[Item.of(`2x ${C(`track`)}`)],
+		1
+	))
+
+	event.custom(SequencedAssembly(
+		Item.of(MC("end_stone_brick_slab")),
+		Item.of(RW(`track_incomplete_ender`)),
+		[
+			Deploying([Item.of(RW(`track_incomplete_ender`)), Item.of(A("steel_ingot"))], [Item.of(RW(`track_incomplete_ender`))]),
+			Deploying([Item.of(RW(`track_incomplete_ender`)), Item.of(A("steel_ingot"))], [Item.of(RW(`track_incomplete_ender`))]),
+			Pressing([Item.of(RW(`track_incomplete_ender`))], [Item.of(RW(`track_incomplete_ender`))])
+		],
+		[Item.of(`2x ${RW(`track_ender`)}`)],
+		1
+	))
+
+	event.custom(SequencedAssembly(
+		Item.of(MC("glass_pane")),
+		Item.of(RW(`track_incomplete_tieless`)),
+		[
+			Deploying([Item.of(RW(`track_incomplete_tieless`)), Item.of(A("steel_nugget"))], [Item.of(RW(`track_incomplete_tieless`))]),
+			Deploying([Item.of(RW(`track_incomplete_tieless`)), Item.of(A("steel_nugget"))], [Item.of(RW(`track_incomplete_tieless`))]),
+			Pressing([Item.of(RW(`track_incomplete_tieless`))], [Item.of(RW(`track_incomplete_tieless`))])
+		],
+		[Item.of(`2x ${RW(`track_tieless`)}`)],
+		1
+	))
+
+	event.custom(SequencedAssembly(
+		Item.of(C("metal_girder")),
+		Item.of(RW(`track_incomplete_monorail`)),
+		[
+			Deploying([Item.of(RW(`track_incomplete_monorail`)), Item.of(C("metal_bracket"))], [Item.of(RW(`track_incomplete_monorail`))]),
+			Deploying([Item.of(RW(`track_incomplete_monorail`)), Item.of(A("steel_sheet"))], [Item.of(RW(`track_incomplete_monorail`))]),
+			Pressing([Item.of(RW(`track_incomplete_monorail`))], [Item.of(RW(`track_incomplete_monorail`))])
+		],
+		[Item.of(`12x ${RW(`track_monorail`)}`)],
+		1
+	))
 })
 

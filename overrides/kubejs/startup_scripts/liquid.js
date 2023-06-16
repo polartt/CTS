@@ -4,6 +4,28 @@ StartupEvents.registry("fluid", event => {
 	}
 	event.create("fine_sand").displayName("Fine Sand").stillTexture(KJ("fluid/fine_sand_still")).flowingTexture(KJ("fluid/fine_sand_flow")).bucketColor(0xE3DBB0)
 
+	simpleLiquid("green_tea", 0x9FA63B)
+
+	simpleLiquid("yellow_tea", 0xA98341)
+
+	simpleLiquid("black_tea", 0x773D27)
+
+	simpleLiquid("rose_hip_tea", 0xBD2528)
+
+	simpleLiquid("dandelion_tea", 0xE3CB6B)
+
+	simpleLiquid("purulent_tea", 0xBC3E49)
+
+	simpleLiquid("gamblers_tea", 0x735E3F)
+
+	simpleLiquid("apple_cider", 0xDDAD78)
+
+	simpleLiquid("melon_juice", 0xF75D38)
+
+	simpleLiquid("sweet_berry_filling", 0xA30700)
+
+	simpleLiquid("rose_hip_filling", 0xEA2F2B)
+
 	simpleLiquid("slime", 0x8AD480)
 
 	simpleLiquid("beer", 0xEEDC69)

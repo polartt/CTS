@@ -1,8 +1,14 @@
 console.info("Remove")
 
 ServerEvents.recipes(event => {
-	event.remove({output: SD("emerald_storage_upgrade")})
+	const RemoveDrawerUpgrades = (material) => {
+		event.remove({output: SD(`${material}_storage_upgrade`)})
+	}
+	["iron", "gold", "diamond", "emerald", "obsidian"].map(material => RemoveDrawerUpgrades(material))
 	event.remove({output: SD("compacting_drawers_3")})
+	event.remove({output: SD("controller")})
+	event.remove({output: SD("controller_slave")})
+	event.remove({output: SP("faucet")})
 	event.remove({id: A("mixing/steel_ingot")})
 	event.remove({output: DD("cast_iron_billet")})
 	event.remove({id: C("crafting/kinetics/super_glue")})
@@ -22,9 +28,26 @@ ServerEvents.recipes(event => {
 	event.remove({output: CL("advanced_chunk_loader")})
 	event.remove({output: CL("ultimate_chunk_loader")})
 	event.remove({output: COE("drilling_machine")})
+	event.remove({output: S("mineomite")})
 	event.remove({id: COE("drilling/hardened_diamond")})
 	event.remove({id: COE("drilling/diamond")})
+	event.remove({id: COE("drilling/emerald")})
+	event.remove({id: COE("drilling/iron")})
+	event.remove({id: COE("drilling/redstone")})
 	event.remove({id: MC("chain")})
+	event.remove({output: AM("rocky_chestplate")})
+	event.remove({output: AM("enderiophage_rocket")})
+	event.remove({output: AM("transmutation_table")})
+
+	const removeCrushing = (rocks, metals) => {
+		rocks.forEach(rock => {
+			metals.forEach(metal => {
+				event.remove({id: S(`crushing/${rock}_${metal}_ore`)})
+			})
+		});
+	}
+
+	removeCrushing(["granite", "tuff", "andesite", "diorite"], ["copper", "gold", "iron", "zinc"])
 
 	// event.remove({output: CBC("autocannon_breech_cast_mould")})
 	// event.remove({output: CBC("autocannon_recoil_spring_cast_mould")})

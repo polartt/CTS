@@ -5,4 +5,7 @@ ServerEvents.tags("item", event => {
 	event.add("forge:mushrooms", "spelunkery:inkcap_mushroom")
 	event.add("forge:mushrooms", "spelunkery:white_inkcap_mushroom")
 	event.add("forge:mushrooms", "spelunkery:button_mushroom")
+
+	event.add("forge:limestone", Q("limestone"))
+	event.add("forge:limestone", C("limestone"))
 })

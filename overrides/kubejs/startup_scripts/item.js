@@ -6,6 +6,7 @@ StartupEvents.registry("item", event => {
 	event.create("steel_whisk")
 	event.create("steel_propeller")
 	event.create("profession_stub")
+	event.create("lot_ticket")
 	event.create("sand_ball")
 	event.create("silicon_compound")
 	event.create("coal_chunk")
@@ -17,21 +18,21 @@ StartupEvents.registry("item", event => {
 	event.create("graham_cracker").food(food => {
 		food
 			.hunger(5)
-			.saturation(1)
+			.saturation(0.25)
 	})
 	event.create("smore").food(food => {
 		food
 			.hunger(8)
-			.saturation(1.25)
+			.saturation(0.25)
 	}).displayName("S'more")
 	event.create("more_smore").food(food => {
 		food
 			.hunger(12)
-			.saturation(1.5)
+			.saturation(0.25)
 	}).displayName("More S'more Double S'mingot")
 	event.create("four_smore").food(food => {
 		food
 			.hunger(20)
-			.saturation(21)
+			.saturation(0.25)
 	}).displayName("Four S'more Quad S'mingot")
 })

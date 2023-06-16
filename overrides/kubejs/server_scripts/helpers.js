@@ -15,19 +15,14 @@ const CH = (id) => `chipped:${id}`
 const Q = (id) => `quark:${id}`
 const FD = (id) => `farmersdelight:${id}`
 const S = (id) => `spelunkery:${id}`
+const SP = (id) => `supplementaries:${id}`
 const RW = (id) => `railways:${id}`
 const F = (id) => `forge:${id}`
 const CCF = (id) => `create_confectionery:${id}`
 const CD = (id) => `createdeco:${id}`
 const COE = (id) => `createoreexcavation:${id}`
-
-const CreateCobbleGeneratorRecipe = (items, fluids, outputs) => {
-	const ingredients = fluids.map((fluid) => ({ "amount": 1, "fluid": fluid }))
-		.concat(items.map((item) => ({ "item": item })));
-
-	const results = ingredients.concat(outputs.map((item) => ({ "item": item })))
-	return Mixing(ingredients, results)
-}
+const AM = (id) => `alexsmobs:${id}`
+const FR = (id) => `farmersrespite:${id}`
 
 const HeatedMixing = (ingredients, results) => {
 	const Recipe = Mixing(ingredients, results)
@@ -93,6 +88,14 @@ const Filling = (ingredients, results) => {
 const Emptying = (ingredients, results) => {
 	return {
 		"type": C("emptying"),
+		"ingredients": ingredients,
+		"results": results
+	}
+}
+
+const Crushing = (ingredients, results) => {
+	return {
+		"type": C("crushing"),
 		"ingredients": ingredients,
 		"results": results
 	}

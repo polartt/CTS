@@ -1,9 +1,10 @@
 console.info("Steel")
 
 ServerEvents.recipes(event => {
-	event.custom(HeatedMixing([Item.of(`#${MC("coals")}`), Item.of(`#${MC("coals")}`), Item.of(`#${MC("coals")}`), Item.of(MC("iron_ingot")), Item.of(Q("limestone"))], [Item.of(A("steel_ingot"))]))
+	event.custom(HeatedMixing([Item.of(MC("coal")), Item.of(MC("coal")), Item.of(MC("coal")), Item.of(MC("iron_ingot")), Item.of(C("limestone"))], [Item.of(A("steel_ingot"))]))
+	event.custom(HeatedMixing([Item.of(MC("charcoal")), Item.of(MC("charcoal")), Item.of(MC("charcoal")), Item.of(MC("iron_ingot")), Item.of(C("limestone"))], [Item.of(A("steel_ingot"))]))
 
-    event.shapeless(`2x ${MC("flint_and_steel")}`, [A("steel_ingot"), MC("flint")])
+  event.shapeless(`2x ${MC("flint_and_steel")}`, [A("steel_ingot"), MC("flint")])
     
 	event.shaped(`2x ${MC("hopper")}`, [
 		"S S",

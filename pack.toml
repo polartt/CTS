@@ -1,0 +1,13 @@
+name = "Create The Server"
+author = "Create The Server Team"
+version = "1.0.3"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "9797fab2e12bee0161e59c332547270253ad53479007a9cd48fe83da88c94da2"
+
+[versions]
+forge = "43.2.14"
+minecraft = "1.19.2"

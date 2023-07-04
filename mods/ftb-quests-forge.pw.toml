@@ -1,0 +1,13 @@
+name = "FTB Quests (Forge)"
+filename = "ftb-quests-forge-1902.4.17-build.240.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2c4180c2fbcfeddc177c03e60616c68dc074d9b2"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4600397
+project-id = 289412

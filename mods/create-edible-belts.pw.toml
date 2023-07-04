@@ -1,0 +1,13 @@
+name = "Create: Edible Belts"
+filename = "create-ediblebelts-1.0.1-1.19.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2e64697374de1b81f4f01ab763cc857a470e3834"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4541410
+project-id = 652716

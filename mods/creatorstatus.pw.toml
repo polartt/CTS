@@ -1,0 +1,13 @@
+name = "CreatorStatus"
+filename = "creatorstatus-0.1.1-1.19.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4a25702a390e2f87a3834df072f535b52492a1e7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4592625
+project-id = 872430

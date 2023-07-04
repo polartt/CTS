@@ -9,13 +9,11 @@ config/NoChatReports
 config/pregen
 config/voicechat
 logs/**
-mods/**
 natives/**
 paintings/**
 palettes/**
 local/**
 patchouli_books/**
-resourcepacks/**
 saves/**
 schematics/**
 screenshots/**

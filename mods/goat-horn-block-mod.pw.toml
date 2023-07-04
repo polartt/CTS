@@ -1,0 +1,13 @@
+name = "Placeable Goat Horns"
+filename = "goathornblock-1.19.2-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b7e270f7494a526dc5d7fa0592cc50ac65c8d3a1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4478835
+project-id = 836292

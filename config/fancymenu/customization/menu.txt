@@ -1,0 +1,99 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.TitleScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  path = config/fancymenu/resources/panorama_overlay.png
+  action = texturizebackground
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 210
+  width = 268
+  action = deep_customization_element:title_screen_forge_top
+  actionid = 1cca82a2-da0c-44dc-a6c8-d9758dc165331688476544274
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 2
+  width = 143
+  action = deep_customization_element:title_screen_branding
+  actionid = baae908c-cfb6-411b-b275-7f812bfb60e71688476544279
+  y = 224
+  height = 50
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 459
+  width = 228
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = 69ad6c94-4083-4a30-9c2a-4b129e79dcb41688476544279
+  y = 256
+  height = 9
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 447
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = c49e35cc-65ac-4755-8c14-36ec2fd7aa911688476544279
+  y = 169
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 207
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = daa0b675-f22f-407c-94e2-248ae43e420d1688476544279
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = original
+  splash_color = #ffff00
+  hidden = true
+  x = 0
+  width = 60
+  splash_rotation = -20
+  action = deep_customization_element:title_screen_splash
+  actionid = 032694d6-486d-42cd-9534-54f65f22f2f01688476544279
+  y = 0
+  height = 30
+}
+
+customization {
+  path = config/fancymenu/resources/minecraft.png
+  orientation = top-centered
+  x = -158
+  width = 316
+  action = addtexture
+  actionid = 7d8ac593-f91f-4eb0-b2bb-246bba5a5f011688476877733
+  y = 9
+  height = 100
+}
+

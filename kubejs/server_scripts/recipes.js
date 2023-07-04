@@ -4,13 +4,13 @@ console.info("Recipes")
 ServerEvents.recipes(event => {
 	event.shapeless(KJ("fine_sand_bucket"), [KJ("sand_ball"), MC("bucket")])
 
-	event.recipes.createoreexcavation.drilling([Item.of(MC("ancient_debris")).withChance(0.1)], `{"text": "Ancient Debris"}`, 1, 1800).drill(COE("netherite_drill")).fluid({"fluid": CEI("hyper_experience"), "amount": 1}).veinSize(1, 5).biomeWhitelist(MC("is_nether")).stress(1024).id("ancient_debris");
+	event.recipes.createoreexcavation.drilling([Item.of(MC("ancient_debris")).withChance(0.1)], `{"text": "Ancient Debris"}`, 1, 1800).drill(COE("netherite_drill")).fluid(Fluid.of(CEI("hyper_experience"), 1)).veinSize(1, 5).biomeWhitelist(MC("is_nether")).stress(1024).id("ancient_debris");
 
-	event.recipes.createoreexcavation.drilling([Item.of(S("rough_diamond")).withChance(0.1)], `{"text": "Diamond"}`, 3, 1200).drill(COE("netherite_drill")).fluid({"fluid": CEI("experience"), "amount": 50}).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(1024).id("diamond");
+	event.recipes.createoreexcavation.drilling([Item.of(S("rough_diamond")).withChance(0.1)], `{"text": "Diamond"}`, 3, 1200).drill(COE("netherite_drill")).fluid(Fluid.of(CEI("experience"), 50)).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(1024).id("diamond");
 
-	event.recipes.createoreexcavation.drilling([Item.of(S("rough_emerald")).withChance(0.1)], `{"text": "Emerald"}`, 5, 1000).fluid({"fluid": MC("water"), "amount": 1000}).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(1024).id("diamond");
+	event.recipes.createoreexcavation.drilling([Item.of(S("rough_emerald")).withChance(0.1)], `{"text": "Emerald"}`, 5, 1000).fluid(Fluid.of(MC("water"), 1000)).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(1024).id("emerald");
 
-	event.recipes.createoreexcavation.drilling(S("rough_lazurite"), `{"text": "Lazurite"}`, 5, 200).fluid({"fluid": MC("water"), "amount": 1000}).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(512).id("lapis");
+	event.recipes.createoreexcavation.drilling(S("rough_lazurite"), `{"text": "Lazurite"}`, 5, 200).fluid(Fluid.of(MC("water"), 1000)).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(512).id("lapis");
 
 	event.recipes.createoreexcavation.drilling(S("rough_cinnabar"), `{"text": "Cinnabar"}`, 10, 400).veinSize(2, 10).biomeWhitelist(MC("is_overworld")).stress(512).id("redstone");
 
@@ -19,28 +19,28 @@ ServerEvents.recipes(event => {
 	const addCrushing = (rocks, metals) => {
 		rocks.forEach(rock => {
 			metals.forEach(metal => {
-				event.custom(Crushing([Item.of(S(`${rock}_${metal}_ore`))], [Item.of(C(`crushed_raw_${metal}`)), Item.of(C(`crushed_raw_${metal}`)).withChance(0.75), Item.of(C("experience_nugget")).withChance(0.75), Item.of(MC(rock)).withChance(0.12)]))
+				event.recipes.createCrushing([Item.of(C(`crushed_raw_${metal}`)), Item.of(C(`crushed_raw_${metal}`)).withChance(0.75), Item.of(C("experience_nugget")).withChance(0.75), Item.of(MC(rock)).withChance(0.12)], [Item.of(S(`${rock}_${metal}_ore`))])
 			})
 		});
 	}
 
 	addCrushing(["granite", "tuff", "andesite", "diorite"], ["copper", "gold", "iron", "zinc"])
 
-	event.custom(Emptying([Item.of(MC("slime_ball"))], [{ "fluid": KJ("slime"), "amount": 100 }]))
+	event.recipes.createEmptying([Fluid.of(KJ("slime"), 100)], [Item.of(MC("slime_ball"))])
 
-	event.custom(Emptying([Item.of(KJ("sand_ball"))], [{ "fluid": KJ("fine_sand"), "amount": 1000 }]))
+	event.recipes.createEmptying([Fluid.of(KJ("fine_sand"), 1000)], [Item.of(KJ("sand_ball"))])
 
 	const CreateCobbleGeneratorRecipe = (items, fluids, outputs) => {
 		// This is horrible, and I have to do it bless KubeJS
 		for (let stubs = 0; stubs < 7; stubs++) {
-			let ingredients = fluids.map((fluid) => ({ "amount": 2 ** stubs, "fluid": fluid }))
+			let ingredients = fluids.map((fluid) => (Fluid.of(fluid, 2 ** stubs)))
 				.concat(items.map((item) => (Item.of(item))))
 
 			for (let i = 0; i < stubs; i++) {
 				ingredients.push(Item.of(KJ("profession_stub")))
 			}
 
-			let ingredients_2 = fluids.map((fluid) => ({ "amount": 2 ** stubs, "fluid": fluid }))
+			let ingredients_2 = fluids.map((fluid) => (Fluid.of(fluid, 2 ** stubs)))
 			.concat(items.map((item) => (Item.of(item))))
 
 			if (stubs > 0) {
@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
 
 			let results = ingredients_2.concat(outputs.map((item) => (Item.of(item, 2 ** stubs))))
 
-			event.custom(Mixing(ingredients, results))
+			event.recipes.createMixing(results, ingredients)
 		}
 	}
 
@@ -61,56 +61,58 @@ ServerEvents.recipes(event => {
 
 	CreateCobbleGeneratorRecipe([MC("blue_ice"), MC("soul_soil")], [MC("lava")], [MC("basalt")])
 	
-	event.custom(Compacting([{ "fluid": KJ("fine_sand"), "amount": 500 }, Item.of(KJ("coal_chunk"))], [Item.of(KJ("silicon_compound"))]))
+	event.recipes.createCompacting(([Item.of(KJ("silicon_compound"))], [Fluid.of(KJ("fine_sand"), 500), Item.of(KJ("coal_chunk"))]))
 
-	event.custom(Splashing([Item.of(MC("sandstone"))], [Item.of(KJ("sand_ball")).withChance(0.0625)]))
+	event.recipes.createSplashing([Item.of(KJ("sand_ball")).withChance(0.0625)], [Item.of(MC("sandstone"))])
 
-	event.custom(Splashing([Item.of(MC("copper_block"))], [Item.of(MC("exposed_copper"))]))
-	event.custom(Splashing([Item.of(MC("exposed_copper"))], [Item.of(MC("weathered_copper"))]))
-	event.custom(Splashing([Item.of(MC("weathered_copper"))], [Item.of(MC("oxidized_copper"))]))
+	event.recipes.createSplashing([Item.of(MC("exposed_copper"))], [Item.of(MC("copper_block"))])
+	event.recipes.createSplashing([Item.of(MC("weathered_copper"))], [Item.of(MC("exposed_copper"))])
+	event.recipes.createSplashing([Item.of(MC("oxidized_copper"))], [Item.of(MC("weathered_copper"))])
 
 	event.replaceOutput({}, CBC("cast_iron_ingot"), CD("cast_iron_ingot"))
 	event.replaceInput({}, CBC("cast_iron_ingot"), CD("cast_iron_ingot"))
 	event.replaceInput({}, DD("cast_iron_billet"), CD("cast_iron_ingot"))
 
-	event.custom(HeatedMixing([Item.of(MC("quartz")), Item.of(MC("redstone")), Item.of(MC("redstone")), Item.of(MC("redstone")), Item.of(MC("redstone"))], [Item.of(C("rose_quartz"))]))
+	event.recipes.createMixing([Item.of(C("rose_quartz"))], [Item.of(MC("quartz")), Item.of(MC("redstone")), Item.of(MC("redstone")), Item.of(MC("redstone")), Item.of(MC("redstone"))]).heated()
 
-	event.shapeless(`8x ${Q("limestone")}`, [`8x #${(F("stone"))}`, Item.of(MC("lime_dye"))])
-	event.custom(Compacting([Item.of(MC("clay"))], [Item.of(Q("shale"))]))
-	event.custom(Compacting([Item.of(MC("red_sandstone"))], [Item.of(Q("jasper"))]))
-	event.custom(Compacting([Item.of(MC("dirt")), Item.of(MC("ice"))], [Item.of(Q("permafrost"))]))
-	event.custom(Mixing([Item.of(MC("popped_chorus_fruit")), Item.of(MC("end_stone"))], [Item.of(Q("myalite"))]))
+	event.shapeless(Q("limestone", 8), [F("#stone", 8), Item.of(MC("lime_dye"))])
+	event.recipes.createCompacting(([Item.of(Q("shale"))], [Item.of(MC("clay"))]))
+	event.recipes.createCompacting(([Item.of(Q("jasper"))], [Item.of(MC("red_sandstone"))]))
+	event.recipes.createCompacting(([Item.of(Q("permafrost"))], [Item.of(MC("dirt")), Item.of(MC("ice"))]))
+	event.recipes.createMixing([Item.of(Q("myalite"))], [Item.of(MC("popped_chorus_fruit")), Item.of(MC("end_stone"))])
 
 	const MakePlankCuttingRecipes = (modFunc, woodType) => {
-		event.custom(Cutting([Item.of(modFunc(`${woodType}_planks`))], [Item.of(`2x ${modFunc(`${woodType}_slab`)}`)]))
+		if (modFunc == Q) {
+			event.recipes.createCutting([Item.of(modFunc(`${woodType}_planks_slab`, 2))], [Item.of(modFunc(`${woodType}_planks`))])
 
-		event.custom(Cutting([Item.of(modFunc(`${woodType}_planks`))], [Item.of(modFunc(`${woodType}_stairs`))]))
+			event.recipes.createCutting([Item.of(modFunc(`${woodType}_planks_stairs`))], [Item.of(modFunc(`${woodType}_planks`))])
+		} else {
+			event.recipes.createCutting([Item.of(modFunc(`${woodType}_slab`, 2))], [Item.of(modFunc(`${woodType}_planks`))])
+
+			event.recipes.createCutting([Item.of(modFunc(`${woodType}_stairs`))], [Item.of(modFunc(`${woodType}_planks`))])
+		}
 		if (woodType == "crimson" || woodType == "warped") {
-			event.custom(Cutting([Item.of(modFunc(`${woodType}_stem`))], [Item.of(Q(`hollow_${woodType}_stem`))]))
-			event.custom(SequencedAssembly(
+			event.recipes.createCutting([Item.of(Q(`hollow_${woodType}_stem`))], [Item.of(modFunc(`${woodType}_stem`))])
+			event.recipes.createSequencedAssembly(
+				[Item.of(MC("barrel"))],
 				Item.of(Q(`hollow_${woodType}_stem`)),
-				Item.of(KJ("incomplete_barrel")),
 				[
-					Deploying([Item.of(KJ("incomplete_barrel")), Item.of("#minecraft:wooden_slabs")], [Item.of(KJ("incomplete_barrel"))])
-				],
-				[Item.of(MC("barrel"))],
-				2
-			))
+					event.recipes.createDeploying([Item.of(KJ("incomplete_barrel"))], [Item.of(KJ("incomplete_barrel")), MC("#wooden_slabs")])
+				]
+			).transitionalItem(Item.of(KJ("incomplete_barrel"))).loops(2)
 		} else if (woodType != "bamboo") {
-			event.custom(Cutting([Item.of(modFunc(`${woodType}_log`))], [Item.of(Q(`hollow_${woodType}_log`))]))
-			event.custom(SequencedAssembly(
-				Item.of(Q(`hollow_${woodType}_log`)),
-				Item.of(KJ("incomplete_barrel")),
-				[
-					Deploying([Item.of(KJ("incomplete_barrel")), Item.of("#minecraft:wooden_slabs")], [Item.of(KJ("incomplete_barrel"))])
-				],
+			event.recipes.createCutting([Item.of(Q(`hollow_${woodType}_log`))], [Item.of(modFunc(`${woodType}_log`))])
+			event.recipes.createSequencedAssembly(
 				[Item.of(MC("barrel"))],
-				2
-			))
+				Item.of(Q(`hollow_${woodType}_log`)),
+				[
+					event.recipes.createDeploying([Item.of(KJ("incomplete_barrel"))], [Item.of(KJ("incomplete_barrel")), MC("#wooden_slabs")])
+				]
+			).transitionalItem(Item.of(KJ("incomplete_barrel"))).loops(2)
 		}
 	}
 
-	event.shapeless(MC("mushroom_stew"), [`2x #${F("mushrooms")}`, MC("bowl")])
+	event.shapeless(MC("mushroom_stew"), [F("#mushrooms", 2), MC("bowl")])
 
 	const vanillaWoods = ["oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "crimson", "warped", "mangrove"]
 	const quarkWoods = ["blossom", "azalea", "ancient", "bamboo"]
@@ -201,68 +203,71 @@ ServerEvents.recipes(event => {
 	})
 
 	let CreateTea = (tea) => {
-		event.custom(Mixing([Item.of(`${FR(tea)}_tea_leaves`), Item.of(`${FR(tea)}_tea_leaves`), { "fluid": MC("water"), "amount": 250 }], [{ "fluid": KJ(`${tea}_tea`), "amount": 250 }]))
+		event.recipes.createMixing([Fluid.of(KJ(`${tea}_tea`), 250)], [Item.of(`${FR(tea)}_tea_leaves`), Item.of(`${FR(tea)}_tea_leaves`), Fluid.of(MC("water"), 250)])
 
-		event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ(`${tea}_tea`), "amount": 250 }], [Item.of(`${FR(tea)}_tea`)]))
+		event.recipes.createFilling([Item.of(`${FR(tea)}_tea`)], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ(`${tea}_tea`), 250)])
 	}
 
 	["green", "yellow", "black"].map(tea => CreateTea(tea))
 
-	event.custom(HeatedMixing([Item.of(FR("rose_hips")), Item.of(FR("rose_hips")), { "fluid": MC("water"), "amount": 250 }], [{ "fluid": KJ(`rose_hip_tea`), "amount": 250 }]))
+	const infestedStones = ["stone", "cobblestone", "stone_bricks", "mossy_stone_bricks", "cracked_stone_bricks", "chiseled_stone_bricks", "deepslate"]
+	infestedStones.map(key => event.recipes.createCrushing(Item.of(C("experience_nugget")).withChance(0.001), MC(`infested_${key}`)))
 
-	event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ(`rose_hip_tea`), "amount": 250 }], [Item.of(FR("rose_hip_tea"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`rose_hip_tea`), 250)], [Item.of(FR("rose_hips")), Item.of(FR("rose_hips")), Fluid.of(MC("water"), 250)]).heated()
 
-	event.custom(HeatedMixing([Item.of(MC("dandelion")), Item.of(`#${FR("tea_leaves")}`), { "fluid": MC("water"), "amount": 250 }], [{ "fluid": KJ(`dandelion_tea`), "amount": 250 }]))
+	event.recipes.createFilling([Item.of(FR("rose_hip_tea"))], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ(`rose_hip_tea`), 250)])
 
-	event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ(`dandelion_tea`), "amount": 250 }], [Item.of(FR("dandelion_tea"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`dandelion_tea`), 250)], [Item.of(MC("dandelion")), FR("#tea_leaves"), Fluid.of(MC("water"), 250)]).heated()
 
-	event.custom(HeatedMixing([Item.of(MC("nether_wart")), Item.of(MC("fermented_spider_eye")), { "fluid": MC("water"), "amount": 250 }], [{ "fluid": KJ(`purulent_tea`), "amount": 250 }]))
+	event.recipes.createFilling([Item.of(FR("dandelion_tea"))], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ(`dandelion_tea`), 250)])
 
-	event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ(`purulent_tea`), "amount": 250 }], [Item.of(FR("purulent_tea"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`purulent_tea`), 250)], [Item.of(MC("nether_wart")), Item.of(MC("fermented_spider_eye")), Fluid.of(MC("water"), 250)]).heated()
 
-	event.custom(HeatedMixing([Item.of(FR("coffee_berries")), Item.of(MC("glow_berries")), { "fluid": MC("water"), "amount": 250 }], [{ "fluid": KJ(`gamblers_tea`), "amount": 250 }]))
+	event.recipes.createFilling([Item.of(FR("purulent_tea"))], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ(`purulent_tea`), 250)])
 
-	event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ(`gamblers_tea`), "amount": 250 }], [Item.of(FR("gamblers_tea"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`gamblers_tea`), 250)], [Item.of(FR("coffee_berries")), Item.of(MC("glow_berries")), Fluid.of(MC("water"), 250)]).heated()
 
-	event.custom(Mixing([Item.of(MC("melon_slice")), Item.of(MC("melon_slice")), Item.of(MC("melon_slice")), Item.of(MC("melon_slice")), Item.of(MC("sugar")), { "fluid": MC("water"), "amount": 250 }], [{ "fluid": KJ(`melon_juice`), "amount": 250 }]))
+	event.recipes.createFilling([Item.of(FR("gamblers_tea"))], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ(`gamblers_tea`), 250)])
 
-	event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ(`melon_juice`), "amount": 250 }], [Item.of(FD("melon_juice"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`melon_juice`), 250)], [Item.of(MC("melon_slice")), Item.of(MC("melon_slice")), Item.of(MC("melon_slice")), Item.of(MC("melon_slice")), Item.of(MC("sugar")), Fluid.of(MC("water"), 250)])
 
-	event.custom(HeatedMixing([Item.of(MC("apple")), Item.of(MC("apple")), Item.of(MC("sugar"))], [{ "fluid": KJ(`apple_cider`), "amount": 250 }]))
+	event.recipes.createFilling([Item.of(FD("melon_juice"))], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ(`melon_juice`), 250)])
 
-	event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ(`apple_cider`), "amount": 250 }], [Item.of(FD("apple_cider"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`apple_cider`), 250)], [Item.of(MC("apple")), Item.of(MC("apple")), Item.of(MC("sugar"))]).heated()
 
-	event.custom(Mixing([Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), { "fluid": MC("milk"), "amount": 500 }], [{ "fluid": KJ(`sweet_berry_filling`), "amount": 1000 }]))
+	event.recipes.createFilling([Item.of(FD("apple_cider"))], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ(`apple_cider`), 250)])
 
-	event.custom(Filling([Item.of(FD("pie_crust")), { "fluid": KJ(`sweet_berry_filling`), "amount": 1000 }], [Item.of(FD("sweet_berry_cheesecake"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`sweet_berry_filling`), 1000)], [Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Item.of(`${MC("sweet_berries")}`), Fluid.of(MC("milk"), 500)])
 
-	event.custom(Mixing([Item.of(FR("rose_hips")), Item.of(FR("rose_hips")), Item.of(FR("rose_hips")), { "fluid": MC("milk"), "amount": 500 }, { "fluid": C("honey"), "amount": 250 }], [{ "fluid": KJ(`rose_hip_filling`), "amount": 1000 }]))
+	event.recipes.createFilling([Item.of(FD("sweet_berry_cheesecake"))], [Item.of(FD("pie_crust")), Fluid.of(KJ(`sweet_berry_filling`), 1000)])
 
-	event.custom(Filling([Item.of(FD("pie_crust")), { "fluid": KJ(`rose_hip_filling`), "amount": 1000 }], [Item.of(FR("rose_hip_pie"))]))
+	event.recipes.createMixing([Fluid.of(KJ(`rose_hip_filling`), 1000)], [Item.of(FR("rose_hips")), Item.of(FR("rose_hips")), Item.of(FR("rose_hips")), Fluid.of(MC("milk"), 500), Fluid.of(C("honey"), 250)])
 
-	event.custom(Mixing([Item.of(MC("sugar")), Item.of(MC("cocoa_beans")), { "fluid": MC("milk"), "amount": 250 }, { "fluid": KJ("dragon_breath"), "amount": 250 }], [{ "fluid": CC(`ruby_chocolate`), "amount": 250 }]))
+	event.recipes.createFilling([Item.of(FR("rose_hip_pie"))], [Item.of(FD("pie_crust")), Fluid.of(KJ(`rose_hip_filling`), 1000)])
+
+	event.recipes.createMixing([Fluid.of(CCF(`ruby_chocolate`), 250)], [Item.of(MC("sugar")), Item.of(MC("cocoa_beans")), Fluid.of(MC("milk"), 250), Fluid.of(KJ("dragon_breath"), 250)])
 
 	let CreateAlcohol = (drink) => {
-		event.custom(Filling([Item.of(BC("tankard")), { "fluid": KJ(drink), "amount": 250 }], [Item.of(BC(drink))]))
+		event.recipes.createFilling([Item.of(BC(drink))], [Item.of(BC("tankard")), Fluid.of(KJ(drink), 250)])
 
-		event.custom(Emptying([Item.of(BC(drink))], [{ "fluid": KJ(drink), "amount": 250 }, Item.of(BC("tankard"))]))
+		event.recipes.createEmptying([Fluid.of(KJ(drink), 250), Item.of(BC("tankard"))], [Item.of(BC(drink))])
 	}
 
 	["beer", "bloody_mary", "dread_nog", "egg_grog", "glittering_grenadine", "kombucha", "mead", "pale_jane", "red_rum", "rice_wine", "saccharine_rum", "salty_folly", "steel_toe_stout", "strongroot_ale", "vodka", "withering_dross"].map(drink => CreateAlcohol(drink))
 
-	event.custom(Compacting([Item.of(KJ("graham_cracker"))], [Item.of(C("dough")), Item.of(MC("sugar"))]))
-	event.custom(Compacting([Item.of(KJ("graham_cracker"))], [Item.of(FD("wheat_dough")), Item.of(MC("sugar"))]))
-	event.shapeless(KJ("smore"), [`2x ${KJ("graham_cracker")}`, CCF("bar_of_black_chocolate"), CCF("marshmallow")])
-	event.shapeless(KJ("smore"), [`2x ${KJ("graham_cracker")}`, CCF("black_chocolate_glazed_marshmallow")])
-	event.shapeless(KJ("more_smore"), [`2x ${KJ("smore")}`, CCF("bar_of_black_chocolate"), CCF("marshmallow")])
-	event.shapeless(KJ("more_smore"), [`2x ${KJ("smore")}`, CCF("black_chocolate_glazed_marshmallow")])
-	event.shapeless(KJ("four_smore"), [`2x ${KJ("more_smore")}`, CCF("bar_of_black_chocolate"), CCF("marshmallow")])
-	event.shapeless(KJ("four_smore"), [`2x ${KJ("more_smore")}`, CCF("black_chocolate_glazed_marshmallow")])
+	event.recipes.createCompacting([Item.of(KJ("graham_cracker"))], [Item.of(C("dough")), Item.of(MC("sugar"))])
+	event.recipes.createCompacting([Item.of(KJ("graham_cracker"))], [Item.of(FD("wheat_dough")), Item.of(MC("sugar"))])
+	event.shapeless(KJ("smore"), [KJ("graham_cracker", 2), CCF("bar_of_black_chocolate"), CCF("marshmallow")])
+	event.shapeless(KJ("smore"), [KJ("graham_cracker", 2), CCF("black_chocolate_glazed_marshmallow")])
+	event.shapeless(KJ("more_smore"), [KJ("smore", 2), CCF("bar_of_black_chocolate"), CCF("marshmallow")])
+	event.shapeless(KJ("more_smore"), [KJ("smore", 2), CCF("black_chocolate_glazed_marshmallow")])
+	event.shapeless(KJ("four_smore"), [KJ("more_smore", 2), CCF("bar_of_black_chocolate"), CCF("marshmallow")])
+	event.shapeless(KJ("four_smore"), [KJ("more_smore", 2), CCF("black_chocolate_glazed_marshmallow")])
 
-	event.custom(SuperheatedMixing([{ "fluid": CEI("experience"), "amount": 100 }, Item.of(MC("lapis_lazuli")), Item.of(MC("glow_ink_sac")), Item.of(Q("ancient_fruit"))], [{ "fluid": CEI("hyper_experience"), "amount": 1 }]))
+	event.recipes.createMixing([Fluid.of(CEI("hyper_experience"), 1)], [Fluid.of(CEI("experience"), 100), Item.of(MC("lapis_lazuli")), Item.of(MC("glow_ink_sac")), Item.of(Q("ancient_fruit"))]).superheated()
 
 	//Chainges
-	event.shaped(`8x ${MC("chain")}`, [
+	event.shaped(MC("chain", 8), [
 		"N",
 		"I",
 		"N"
@@ -275,24 +280,14 @@ ServerEvents.recipes(event => {
 	// Mangrove
 	event.shapeless(MC("mud"), MC("muddy_mangrove_roots"))
 
-	event.custom(Milling(
-		[
-			Item.of(MC("muddy_mangrove_roots"))
-		], [
-		Item.of(MC("stick")).withChance(0.50),
-		Item.of(MC("stick")).withChance(0.40),
-		Item.of(MC("mangrove_propagule")).withChance(0.05)]
-	))
+	event.recipes.createEmptying([Item.of(MC("stick")).withChance(0.50), Item.of(MC("stick")).withChance(0.40), Item.of(MC("mangrove_propagule")).withChance(0.05)], [Item.of(MC("muddy_mangrove_roots"))])
 
-	event.custom(Milling([Item.of(MC("mangrove_roots"))], [
-		Item.of(MC("stick")).withChance(0.50),
-		Item.of(MC("stick")).withChance(0.40)
-	]))
+	event.recipes.createEmptying([Item.of(MC("stick")).withChance(0.50), Item.of(MC("stick")).withChance(0.40)], [Item.of(MC("mangrove_roots"))])
 
 	//End stone and dragons breath recipes
-	event.custom(Mixing([Item.of(MC("cobblestone")), Item.of(MC("popped_chorus_fruit"))], [Item.of(MC("end_stone"))]))
-	event.custom(SuperheatedMixing([Item.of(MC("dragon_head")), Item.of(MC("crying_obsidian"))], [{ "fluid": KJ("dragon_breath"), "amount": 250 }, Item.of(MC("dragon_head"))]))
+	event.recipes.createMixing([Item.of(MC("end_stone"))], [Item.of(MC("cobblestone")), Item.of(MC("popped_chorus_fruit"))])
+	event.recipes.createMixing([Fluid.of(KJ("dragon_breath"), 250), Item.of(MC("dragon_head"))], [Item.of(MC("dragon_head")), Item.of(MC("crying_obsidian"))]).superheated()
 
-	event.custom(Filling([Item.of("minecraft:glass_bottle"), { "fluid": KJ("dragon_breath"), "amount": 250 }], [Item.of(MC("dragon_breath"))]))
-	event.custom(Emptying([Item.of(MC("dragon_breath"))], [Item.of("minecraft:glass_bottle"), { "fluid": KJ("dragon_breath"), "amount": 250 }]))
+	event.recipes.createFilling([Item.of(MC("dragon_breath"))], [Item.of("minecraft:glass_bottle"), Fluid.of(KJ("dragon_breath"), 250)])
+	event.recipes.createEmptying([Item.of("minecraft:glass_bottle"), Fluid.of(KJ("dragon_breath"), 250)], [Item.of(MC("dragon_breath"))])
 })

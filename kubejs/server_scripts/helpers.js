@@ -1,130 +1,27 @@
-const MC = (id) => `minecraft:${id}`
-const C = (id) => `create:${id}`
-const KJ = (id) => `kubejs:${id}`
-const CC = (id) => `computercraft:${id}`
-const AP = (id) => `advancedperipherals:${id}`
-const SD = (id) => `storagedrawers:${id}`
-const CBC = (id) => `createbigcannons:${id}`
-const DD = (id) => `dustrial_decor:${id}`
-const A = (id) => `alloyed:${id}`
-const CA = (id) => `createaddition:${id}`
-const CEI = (id) => `create_enchantment_industry:${id}`
-const CL = (id) => `chunkloaders:${id}`
-const BC = (id) => `brewinandchewin:${id}`
-const CH = (id) => `chipped:${id}`
-const Q = (id) => `quark:${id}`
-const FD = (id) => `farmersdelight:${id}`
-const S = (id) => `spelunkery:${id}`
-const SP = (id) => `supplementaries:${id}`
-const RW = (id) => `railways:${id}`
-const F = (id) => `forge:${id}`
-const CCF = (id) => `create_confectionery:${id}`
-const CD = (id) => `createdeco:${id}`
-const COE = (id) => `createoreexcavation:${id}`
-const AM = (id) => `alexsmobs:${id}`
-const FR = (id) => `farmersrespite:${id}`
-
-const HeatedMixing = (ingredients, results) => {
-	const Recipe = Mixing(ingredients, results)
-	Recipe.heatRequirement = "heated"
-	return Recipe
-}
-
-const SuperheatedMixing = (ingredients, results) => {
-	const Recipe = Mixing(ingredients, results)
-	Recipe.heatRequirement = "superheated"
-	return Recipe
-}
-
-const Mixing = (ingredients, results) => {
-	return {
-		"type": C("mixing"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Milling = (ingredients, results) => {
-	return {
-		"type": C("milling"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Pressing = (ingredients, results) => {
-	return {
-		"type": C("pressing"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-
-const Compacting = (ingredients, results) => {
-	return {
-		"type": C("compacting"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Cutting = (ingredients, results) => {
-	return {
-		"type": C("cutting"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Filling = (ingredients, results) => {
-	return {
-		"type": C("filling"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Emptying = (ingredients, results) => {
-	return {
-		"type": C("emptying"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Crushing = (ingredients, results) => {
-	return {
-		"type": C("crushing"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Splashing = (ingredients, results) => {
-	return {
-		"type": C("splashing"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const Deploying = (ingredients, results) => {
-	return {
-		"type": C("deploying"),
-		"ingredients": ingredients,
-		"results": results
-	}
-}
-
-const SequencedAssembly = (ingredient, transitionalItem, sequence, results, loops) => {
-	return {
-		"type": C("sequenced_assembly"),
-		"ingredient": ingredient,
-		"transitionalItem": transitionalItem,
-		"sequence": sequence,
-		"results": results,
-		"loops": loops
-	}
-}
-
+const MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "") + domain + ":" + id.replace('#', '')
+const MC = (id, x) => MOD(`minecraft`, id, x)
+const C = (id, x) => MOD(`create`, id, x)
+const KJ = (id, x) => MOD(`kubejs`, id, x)
+const CC = (id, x) => MOD(`computercraft`, id, x)
+const AP = (id, x) => MOD(`advancedperipherals`, id, x)
+const SD = (id, x) => MOD(`storagedrawers`, id, x)
+const CBC = (id, x) => MOD(`createbigcannons`, id, x)
+const DD = (id, x) => MOD(`dustrial_decor`, id, x)
+const A = (id, x) => MOD(`alloyed`, id, x)
+const CA = (id, x) => MOD(`createaddition`, id, x)
+const CEI = (id, x) => MOD(`create_enchantment_industry`, id, x)
+const CL = (id, x) => MOD(`chunkloaders`, id, x)
+const BC = (id, x) => MOD(`brewinandchewin`, id, x)
+const CH = (id, x) => MOD(`chipped`, id, x)
+const Q = (id, x) => MOD(`quark`, id, x)
+const FD = (id, x) => MOD(`farmersdelight`, id, x)
+const S = (id, x) => MOD(`spelunkery`, id, x)
+const SP = (id, x) => MOD(`supplementaries`, id, x)
+const RW = (id, x) => MOD(`railways`, id, x)
+const F = (id, x) => MOD(`forge`, id, x)
+const CCF = (id, x) => MOD(`create_confectionery`, id, x)
+const CD = (id, x) => MOD(`createdeco`, id, x)
+const COE = (id, x) => MOD(`createoreexcavation`, id, x)
+const AM = (id, x) => MOD(`alexsmobs`, id, x)
+const FR = (id, x) => MOD(`farmersrespite`, id, x)
+const DB = (id, x) => MOD(`decorative_blocks`, id, x)

@@ -1,0 +1,18 @@
+#.
+#Heal damage from explosive sources.
+healExplosions = true
+#.
+#Heal damage from creeper explosions.
+healCreeperExplosions = true
+#.
+#Heal damage from fire sources.
+healFires = true
+#.
+#Delay in ticks before any damage is. E.g. 6000 ticks == 5 minutes.
+#Range: > 1200
+delayInTicksBeforeHealingDamage = 12000
+#.
+#Ticks between each heal.
+#Range: 1 ~ 100
+ticksBetweenHeals = 20
+

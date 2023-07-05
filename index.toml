@@ -45,6 +45,10 @@ file = "config/DistantHorizons.toml"
 hash = "42788ae03cfcce31d5ae5562665e424ab4560224dfc8241f4443d81a5cbf9b7d"
 
 [[files]]
+file = "config/MouseTweaks.cfg"
+hash = "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4"
+
+[[files]]
 file = "config/aileron-client-config.toml"
 hash = "ed75e55c02f94b8b6c22912e78504f2c28f2056faf381b54fc494d9bd9f93707"
 
@@ -55,6 +59,10 @@ hash = "f385c708eba9dc9eccd5df86f7a7c126a5eb0fb03cb95e371c1a5ef546b350a7"
 [[files]]
 file = "config/alexsmobs.toml"
 hash = "ea030cdc201d23d9de3d8157a38f612e4f066eb94f547c46e1578a871b90720c"
+
+[[files]]
+file = "config/appleskin-client.toml"
+hash = "e6609ffbea927ee6390b1317bb6f3abb3f31ee591ca5c1d5e748f5e625fefea1"
 
 [[files]]
 file = "config/artifacts-client.toml"
@@ -69,12 +77,24 @@ file = "config/astikorcarts-common.toml"
 hash = "a2408a95a18305be11c112ca013b17d721018e84650b0fbe5b27e19e880a07a6"
 
 [[files]]
+file = "config/attributefix.json"
+hash = "c15f04a374c32a19df22b82ebcc53735eed627e079b0b497086d916901268494"
+
+[[files]]
 file = "config/betteradvancements-client.toml"
 hash = "9376911f8431f28c6d7cef493ac8466491a79961793096385ad2e88aea4ffdf2"
 
 [[files]]
 file = "config/betterfpsdist-common.toml"
 hash = "aa1058f5026f26c70c3b842080fc57619ce69baa34f39ad85b4f903add3d2e26"
+
+[[files]]
+file = "config/canary.properties"
+hash = "a37eb7f218ab61f3277a103a85c5bd14ff0abe0dff94e17883bcbb5ea28a3855"
+
+[[files]]
+file = "config/chat_heads.json5"
+hash = "295045d3d357057670c761fffed7e21c4f442b8862d681497e8edd6388f86bb1"
 
 [[files]]
 file = "config/chunkloaders-common.toml"
@@ -99,6 +119,10 @@ hash = "1f09257bc11babe19b5e78bce02ed7dcade4efab2a9353008bacb96ddd6bd75f"
 [[files]]
 file = "config/cosmeticarmorreworked-common.toml"
 hash = "ad632cac4e88a5138ae60ff7304bb3586eb93e9d3b34f241e5d532c1e5d19e7e"
+
+[[files]]
+file = "config/cpm.json"
+hash = "78081013b9081481641256cbfa6a5a31f169d1ed99eef97446e25d8515853a04"
 
 [[files]]
 file = "config/create-client.toml"
@@ -193,6 +217,14 @@ file = "config/farmersrespite-common.toml"
 hash = "1f11494139995bcd3782d3b01732d7f5ffc412e556c10ac49c2d79122f00503b"
 
 [[files]]
+file = "config/farsight-common.toml"
+hash = "ae7533e9a074ffea96991df37d1c52f3e70262ad5e15f10d1ddf2c897d13466e"
+
+[[files]]
+file = "config/fastbench.cfg"
+hash = "240a14e19d211945629e719c0df4ff6b537d26fcf58b514b7f7c731b3ad69183"
+
+[[files]]
 file = "config/fastload.properties"
 hash = "c97f6809495cc29d3a92c2a861c91ee20424323cc03ded2721d0d10913704f3e"
 
@@ -237,6 +269,14 @@ file = "config/hourglass-client.toml"
 hash = "23c83d21ba514f9dd1aed6a7d4641c1fe0ed48c5a46ce6f802182cce616626f4"
 
 [[files]]
+file = "config/immediatelyfast.json"
+hash = "5bb977958ae45350a74d24ad28e02e8cdeccc2d6d063ba7f6e54b17061083c0d"
+
+[[files]]
+file = "config/itshallnottick-common.toml"
+hash = "0ad36662bcf7064ab8ee178d2f6a7b7eda024dcc744bab0a7561e3ee209ffbc6"
+
+[[files]]
 file = "config/labels-client.toml"
 hash = "ff4d49e8887003f08adb512551c17ad62cbc8734fe20103da590a92e5675c9e9"
 
@@ -249,6 +289,10 @@ file = "config/lootr-common.toml"
 hash = "aa7a1ca338d3001da495eebedc1cf8a6f8db7c5f262bdb6ec8685143becc0ecb"
 
 [[files]]
+file = "config/maxs_pvp_enhancements-common.toml"
+hash = "b7da7c37ed77a1897f3115af3f7f2358b243c77f46017965504601231a7a12b8"
+
+[[files]]
 file = "config/mimi-client.toml"
 hash = "2bb233014cc41bfc5ddc1f06173b71faf8236f9e80e64b26d7cafda24382395d"
 
@@ -257,8 +301,20 @@ file = "config/mimi-common.toml"
 hash = "b32cbf5c88afe43e072e79625078167c26b798c531c808fdd1d569ab2d9dc485"
 
 [[files]]
+file = "config/oculus.properties"
+hash = "3b74a454d0cd5ce22b312f49b3f2d5165515ae080d18d4ac7b4d71b91c30e842"
+
+[[files]]
 file = "config/patchouli-client.toml"
 hash = "d289f4c7540e3e24bcf6bbf3f5a2aaaf87ccf58027d2213e40497fc627422068"
+
+[[files]]
+file = "config/plasmovoice/client.toml"
+hash = "eaf6004eb1a9deda96d0af5679e2f6592bb3aba049bddc30f9d555f7a4ad4e97"
+
+[[files]]
+file = "config/plasmovoice/server/config.toml"
+hash = "ceebdfaf232b6fde9e458c489704706764982b8cbd4a484e84fcaca5e4ec7c02"
 
 [[files]]
 file = "config/polymorph-integrations.toml"
@@ -269,8 +325,24 @@ file = "config/quark-common.toml"
 hash = "22e95b5745f77550d10582bab720f5c346b4159d473461d7838dd47a1b21fdab"
 
 [[files]]
+file = "config/radium.properties"
+hash = "b87ee52fdc722ce1497e7ff55fdbd0660fc9df40c8f2f8167465cab55a388f0d"
+
+[[files]]
 file = "config/railways-client.toml"
 hash = "f3f48f6e45611baf57279ad2328037567b3f456ea59309b197383a680550bfa1"
+
+[[files]]
+file = "config/railways-common.toml"
+hash = "308dc12dc11a11542322e878af8eadd29fe0363bd145455cfb0f9cbae8690b96"
+
+[[files]]
+file = "config/rubidium-mixins.properties"
+hash = "505085d718f5f1df8a10889fe3c3cae4eb3f59eae576da209657c84c84e8ee98"
+
+[[files]]
+file = "config/rubidium-options.json"
+hash = "52fa21d31fc7a3f71311430a38f783f63923ebe84fc19823b7a5c2a087a45cf7"
 
 [[files]]
 file = "config/sidebar_buttons.json"
@@ -378,7 +450,7 @@ hash = "da944d8c2c375fb6775cfa1d05bc41b8aa59b041ceb478c1c508b0a34b0975e1"
 
 [[files]]
 file = "defaultconfigs/create-server.toml"
-hash = "4939a51f9745862c251a03eb00ba98813f88706444e8958ec5cfb48b16064796"
+hash = "29847d5b3309f959a550e40399cdbc092e9ba890ef25924a4da80b81d1e17070"
 
 [[files]]
 file = "defaultconfigs/create_enchantment_industry-server.toml"
@@ -1032,6 +1104,11 @@ metafile = true
 [[files]]
 file = "mods/lazy-dfu-forge.pw.toml"
 hash = "4197e21b90ffc991b42fb07a8e2c55824ba30f66185688a1e63ddbbecd10937e"
+metafile = true
+
+[[files]]
+file = "mods/light-overlay.pw.toml"
+hash = "f43d81c21ee75f1ca04865958e5c3da4971f0ff824b82359e85ce5f765a9b92f"
 metafile = true
 
 [[files]]

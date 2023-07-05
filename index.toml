@@ -546,7 +546,7 @@ hash = "2605dcd4d1109f7eef8ff860f6b12dcde7b7d5117186c1680089f235acf48488"
 
 [[files]]
 file = "kubejs/server_scripts/recipes.js"
-hash = "83eee24d0b4490b62ab60e68958b337ea58ff18ed29c53bbe1ee6aa0c491ecf2"
+hash = "bc473b2dd5142a9b218199780412cfdb8c6f23151b7ee9bb82b04780198dde84"
 
 [[files]]
 file = "kubejs/server_scripts/remove_recipes.js"
@@ -1042,6 +1042,11 @@ metafile = true
 [[files]]
 file = "mods/lootr.pw.toml"
 hash = "f7452c4665f0e8c93438deaae53632f4d7dd155f3222456fa4aa195ed2e73756"
+metafile = true
+
+[[files]]
+file = "mods/maxs-pvp-enhancements.pw.toml"
+hash = "831b8735cda3bdcde1d253c856bb540b99306824e1c47d7df4deefcc387fbc62"
 metafile = true
 
 [[files]]

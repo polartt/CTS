@@ -1,12 +1,12 @@
 name = "Create The Server"
 author = "Create The Server Team"
-version = "1.0.3"
+version = "6.1.2"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "9ea5b27debd813f40f71c8ed2f6698b00c643e644263db410015a721f7664646"
+hash = "c7982b5ea1ccec09dfd14a890827f67923d7d749bfe4c12fca1afbb5ae4f82fa"
 
 [versions]
 forge = "43.2.14"

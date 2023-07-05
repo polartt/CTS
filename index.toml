@@ -325,10 +325,6 @@ file = "config/quark-common.toml"
 hash = "22e95b5745f77550d10582bab720f5c346b4159d473461d7838dd47a1b21fdab"
 
 [[files]]
-file = "config/radium.properties"
-hash = "b87ee52fdc722ce1497e7ff55fdbd0660fc9df40c8f2f8167465cab55a388f0d"
-
-[[files]]
 file = "config/railways-client.toml"
 hash = "f3f48f6e45611baf57279ad2328037567b3f456ea59309b197383a680550bfa1"
 
@@ -863,7 +859,7 @@ metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "89bf28ca15640301ff8cf651ccbcae3047cbaf6af30797f739bfa45d1f2299ce"
+hash = "c0c8819595b27c1aff854c8570acc3fe87dd42d88d8219e7abdd4781257d6ac2"
 metafile = true
 
 [[files]]
@@ -999,11 +995,6 @@ metafile = true
 [[files]]
 file = "mods/flickerfix.pw.toml"
 hash = "07dea3aea9856bfcdbd53d18a6ef44b4a8c41893e934e7d72777d859b5e05280"
-metafile = true
-
-[[files]]
-file = "mods/flywheel.pw.toml"
-hash = "3e9b9722da123b1d4120f0d9aba8de9968aba4aad6e9c7564423672171e00d9e"
 metafile = true
 
 [[files]]
@@ -1194,16 +1185,6 @@ metafile = true
 [[files]]
 file = "mods/quark.pw.toml"
 hash = "3ef9dc22d90a53d4b20b1b26190d58b21a2639b8b20f7d295de4ea3b03e13f30"
-metafile = true
-
-[[files]]
-file = "mods/radium-reforged.pw.toml"
-hash = "c613086ae6556dbc2b131218edc97b44ba065fc5810e8ca5b7bf90e7518a3121"
-metafile = true
-
-[[files]]
-file = "mods/radon.pw.toml"
-hash = "981be0bc0eaa7492cfbe2068ecdb12424ecfba11166b1a264d7928c6391d7271"
 metafile = true
 
 [[files]]

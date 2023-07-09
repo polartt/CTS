@@ -60,7 +60,9 @@ ServerEvents.recipes(event => {
 	CreateCobbleGeneratorRecipe([], [MC("lava"), C("chocolate")], [C("scoria")])
 
 	CreateCobbleGeneratorRecipe([MC("blue_ice"), MC("soul_soil")], [MC("lava")], [MC("basalt")])
-	
+
+	CreateCobbleGeneratorRecipe([], [CEI("ink"), MC("water")], [MC("blackstone")])
+
 	event.recipes.createCompacting(KJ("silicon_compound"), [Fluid.of(KJ("fine_sand"), 500), KJ("coal_chunk")])
 
 	event.recipes.createSplashing([Item.of(KJ("sand_ball")).withChance(0.0625)], [Item.of(MC("sandstone"))])
@@ -125,6 +127,14 @@ ServerEvents.recipes(event => {
 		"LL",
 	], {
 		L: MC("lantern")
+	})
+
+	event.shaped(MC("name_tag"), [
+		"SPA",
+	], {
+		S: MC("string"),
+		P: MC("paper"),
+		A: C("andesite_alloy"),
 	})
 
 	event.shaped(CC("computer_normal"),[

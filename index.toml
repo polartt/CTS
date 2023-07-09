@@ -614,7 +614,7 @@ hash = "2605dcd4d1109f7eef8ff860f6b12dcde7b7d5117186c1680089f235acf48488"
 
 [[files]]
 file = "kubejs/server_scripts/recipes.js"
-hash = "d5f3a11c7b012314851e24f561dd516c9f2f2aa2ffb2ef06fd023dff727e7f75"
+hash = "6b3c6932ac3fbdad1722c46f23275b8763edd5051d359f8a8e7d6c5b6580b95d"
 
 [[files]]
 file = "kubejs/server_scripts/remove_recipes.js"
@@ -1294,7 +1294,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "f5830f0630c1187cdc15cafc4bf746b16883831a72e6bf280c4196c4b16afe64"
+hash = "d39a562d28a152041a3a5ed856b7e3388f288bfd1a59e02e434c86fcc5326850"
 
 [[files]]
 file = "resourcepacks/andesite-chests-crafting-table.pw.toml"

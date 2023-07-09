@@ -1295,3 +1295,23 @@ metafile = true
 [[files]]
 file = "options.txt"
 hash = "f5830f0630c1187cdc15cafc4bf746b16883831a72e6bf280c4196c4b16afe64"
+
+[[files]]
+file = "resourcepacks/andesite-chests-crafting-table.pw.toml"
+hash = "0624bce0855d89d7321a5fa8a5c0bc1e2aab7357e57a02b7c64bc50add9329ef"
+metafile = true
+
+[[files]]
+file = "resourcepacks/computercreate.pw.toml"
+hash = "310cdb86ad49893af29bf20d6b6770aa0d5351e11b8393a47fdaf200f80ba2b3"
+metafile = true
+
+[[files]]
+file = "resourcepacks/jerma-death-message-for-create.pw.toml"
+hash = "20254f6745015648cc2f8a86e13fc62bd138cd0d20ed1a893759158bf765bcda"
+metafile = true
+
+[[files]]
+file = "resourcepacks/lootrchestretexture-for-create.pw.toml"
+hash = "c37caa1f9f13af724fd82001b276448fc99d2df71bcd7d12ac71565176f8a335"
+metafile = true

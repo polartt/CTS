@@ -1,0 +1,13 @@
+name = "Jerma Death Message for Create"
+filename = "Jerma Create Message.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b0d39b191df71fcee6614132ce1ca1bed3b90f22"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4136314
+project-id = 721419

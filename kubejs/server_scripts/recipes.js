@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
 
 	CreateCobbleGeneratorRecipe([MC("blue_ice"), MC("soul_soil")], [MC("lava")], [MC("basalt")])
 	
-	event.recipes.createCompacting(([Item.of(KJ("silicon_compound"))], [Fluid.of(KJ("fine_sand"), 500), Item.of(KJ("coal_chunk"))]))
+	event.recipes.createCompacting(KJ("silicon_compound"), [Fluid.of(KJ("fine_sand"), 500), KJ("coal_chunk")])
 
 	event.recipes.createSplashing([Item.of(KJ("sand_ball")).withChance(0.0625)], [Item.of(MC("sandstone"))])
 
@@ -263,6 +263,14 @@ ServerEvents.recipes(event => {
 	event.shapeless(KJ("more_smore"), [KJ("smore", 2), CCF("black_chocolate_glazed_marshmallow")])
 	event.shapeless(KJ("four_smore"), [KJ("more_smore", 2), CCF("bar_of_black_chocolate"), CCF("marshmallow")])
 	event.shapeless(KJ("four_smore"), [KJ("more_smore", 2), CCF("black_chocolate_glazed_marshmallow")])
+
+	event.shapeless(MC("bone_meal", 2), AM("bone_serpent_tooth"))
+	event.shapeless(MC("bone_meal", 2), AM("gazelle_horn"))
+	event.shapeless(MC("bone_meal", 2), AM("shark_tooth"))
+	event.shapeless(MC("bone_meal", 2), AM("dropbear_claw"))
+	event.shapeless(MC("bone_meal", 2), AM("cachalot_whale_tooth"))
+	event.shapeless(MC("bone_meal", 2), AM("froststalker_horn"))
+	event.shapeless(MC("bone_meal", 2), AM("serrated_shark_tooth"))
 
 	event.recipes.createMixing([Fluid.of(CEI("hyper_experience"), 1)], [Fluid.of(CEI("experience"), 100), Item.of(MC("lapis_lazuli")), Item.of(MC("glow_ink_sac")), Item.of(Q("ancient_fruit"))]).superheated()
 

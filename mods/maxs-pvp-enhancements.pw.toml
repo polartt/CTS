@@ -1,13 +1,13 @@
 name = "Max's PvP Enhancements"
-filename = "pvp_enhancements-1.19.2-0.0.1-forge.jar"
+filename = "pvp_enhancements-0.0.1a+forge-1.19.2.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "e3a5fbc36b8abda20469996cb874dba58784e3a5"
+hash = "d424b7373741a344b9e5a9b115ac9ad3aee32c97"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 4625007
+file-id = 4632129
 project-id = 868247

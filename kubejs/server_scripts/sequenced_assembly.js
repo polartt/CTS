@@ -3,7 +3,7 @@ console.info("Sequence")
 ServerEvents.recipes(event => {
 	event.recipes.createSequencedAssembly(
 		[Item.of(KJ("coal_chunk"))],
-		Item.of(MC("coal")),
+		MC("#coals"),
 		[
 			event.recipes.createFilling([Item.of(KJ("incomplete_coal_chunk"))], [Item.of(KJ("incomplete_coal_chunk")), Fluid.of(MC("water"), 500)]),
 			event.recipes.createCutting([Item.of(KJ("incomplete_coal_chunk"))], [Item.of(KJ("incomplete_coal_chunk"))])
@@ -44,9 +44,10 @@ ServerEvents.recipes(event => {
 		[
 			event.recipes.createPressing([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit"))]),
 			event.recipes.createDeploying([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit")), Item.of(C("golden_sheet"))]),
+			event.recipes.createDeploying([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit")), Item.of(A("steel_sheet"))]),
 			event.recipes.createDeploying([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit")), Item.of(MC("redstone"))]),
 			event.recipes.createPressing([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit"))]),
-			event.recipes.createDeploying([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit")), Item.of(C("copper_sheet"))]),
+			event.recipes.createDeploying([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit")), Item.of(A("bronze_sheet"))]),
 			event.recipes.createPressing([Item.of(KJ("incomplete_circuit"))], [Item.of(KJ("incomplete_circuit"))])
 		]
 	).transitionalItem(Item.of(KJ("incomplete_circuit"))).loops(3)

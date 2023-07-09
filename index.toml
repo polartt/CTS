@@ -614,7 +614,7 @@ hash = "2605dcd4d1109f7eef8ff860f6b12dcde7b7d5117186c1680089f235acf48488"
 
 [[files]]
 file = "kubejs/server_scripts/recipes.js"
-hash = "bc473b2dd5142a9b218199780412cfdb8c6f23151b7ee9bb82b04780198dde84"
+hash = "d5f3a11c7b012314851e24f561dd516c9f2f2aa2ffb2ef06fd023dff727e7f75"
 
 [[files]]
 file = "kubejs/server_scripts/remove_recipes.js"
@@ -622,11 +622,11 @@ hash = "b8535c3cbfe45c527036f67bee22fc5ad6d1462572a7fd55f70ae32cf6581375"
 
 [[files]]
 file = "kubejs/server_scripts/sequenced_assembly.js"
-hash = "11382128fb2b57757383decd4e5274e2a4ab79b81f2de72cd98078387254d172"
+hash = "880f382e6388e48a9e74d7edd6bfe853cd4488f137e804e14a8b0b0e86be44ad"
 
 [[files]]
 file = "kubejs/server_scripts/steel_recipes.js"
-hash = "3cb09d21cdef649ea338783f640c2beb4e21937d3001cbdf7dd0446aa7090797"
+hash = "76df994ca6299dcea871061f2c2133db6a330b81c6e95139a6d2f9f8850a1596"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"
@@ -694,7 +694,7 @@ metafile = true
 
 [[files]]
 file = "mods/artifacts.pw.toml"
-hash = "a33f941fc49859480dad693cbd215a74c222b9c180fceba293de960bbe31dbc9"
+hash = "16551e7ac8fe04584f739d6e3400f9b47bbc0cad763a1be2e504df733532090b"
 metafile = true
 
 [[files]]
@@ -734,7 +734,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-fps-render-distance.pw.toml"
-hash = "70586524d54fab4e7201b558bd48ee5c546300ecfd6e6a8a888dc6935def13c4"
+hash = "cdfd2a578914593c96bb19a414a2a874b63288511da339591a35d03aa2776ca9"
 metafile = true
 
 [[files]]
@@ -754,7 +754,7 @@ metafile = true
 
 [[files]]
 file = "mods/cc-tweaked.pw.toml"
-hash = "9a0923ead8905649bc1260301508dc349ec7dd134fd8278a67e144d1f3ed68df"
+hash = "d9a854dc615bafee94247c2ad9e9d794f291c37cd03b61b9323222ad4a4a96e5"
 metafile = true
 
 [[files]]
@@ -769,7 +769,7 @@ metafile = true
 
 [[files]]
 file = "mods/chunk-loaders.pw.toml"
-hash = "675c57722b14b58feea18921c75afc9512db1f29fe00669a9fb1033ddf894fe2"
+hash = "3f4c4eb77b2ed2697507b7b9b911e19be8cd329bd9ee035a64ec1401789ca0c6"
 metafile = true
 
 [[files]]
@@ -810,6 +810,11 @@ metafile = true
 [[files]]
 file = "mods/cosmetic-armor-reworked.pw.toml"
 hash = "c98b92c96eb546872a0d203969ddba29a17f6ab0e57ff93081d81a138562e8b7"
+metafile = true
+
+[[files]]
+file = "mods/craftpresence.pw.toml"
+hash = "32a5739e0f540f65b320035bca6cb64b53fa6dbf37af6d10ffc429641f7b88f6"
 metafile = true
 
 [[files]]
@@ -854,7 +859,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-steam-n-rails.pw.toml"
-hash = "df737402274b0cd7be194b304d3bf421af2f87af33b2a60da75a1ae3bb1bf688"
+hash = "6947155bf1ded4ed97e11e0c5b113266d706612f3b986adb297ec890681d881c"
 metafile = true
 
 [[files]]
@@ -884,7 +889,7 @@ metafile = true
 
 [[files]]
 file = "mods/custom-player-models.pw.toml"
-hash = "a0d7af66a31bb70fbf7569a82ae541bb0bd7f1d3f02dcd26e701ac6d2732c855"
+hash = "f41165657eb4233fd7a1ad9f4a585943994d55b2407e3b743621d5f90823b67f"
 metafile = true
 
 [[files]]
@@ -1009,7 +1014,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-quests-forge.pw.toml"
-hash = "60660468003512cd53524d5c06117427b0504b82b926a02e7b43fb7bc138b45b"
+hash = "3676028ab6d284a6dd55602664a448b4b3434d5ae428d3329c7e3086a494205c"
 metafile = true
 
 [[files]]
@@ -1114,7 +1119,7 @@ metafile = true
 
 [[files]]
 file = "mods/maxs-pvp-enhancements.pw.toml"
-hash = "831b8735cda3bdcde1d253c856bb540b99306824e1c47d7df4deefcc387fbc62"
+hash = "f069396f3da91e934fe9902210a54d1ca8bd783e4c41678262fd9bdc7baac583"
 metafile = true
 
 [[files]]
@@ -1159,7 +1164,7 @@ metafile = true
 
 [[files]]
 file = "mods/placebo.pw.toml"
-hash = "9656604f85b22fe3c05f27a507ca7ec6f17b5745faea6382f865b2774c0bb909"
+hash = "47ec4b07079902cb55717dc6a7c76eeab6c4272a6465ef02b00504f33cee4a08"
 metafile = true
 
 [[files]]
@@ -1179,7 +1184,7 @@ metafile = true
 
 [[files]]
 file = "mods/polymorph.pw.toml"
-hash = "81fc77ad299e312f43f331ced50b17ef4db92b80992cc8131d0fd958e36c661c"
+hash = "b004022582a154f5d55c1b7660a4075f37962783dc20af8f046afe3bbc839171"
 metafile = true
 
 [[files]]
@@ -1254,7 +1259,7 @@ metafile = true
 
 [[files]]
 file = "mods/supermartijn642s-config-lib.pw.toml"
-hash = "ad510a025c5e7b9255cf1d8eb0ad0004d095261e3f4691cd9bf488e1b1c3f8a8"
+hash = "37bd46aee9f110535261d6ff6c0f1ad7cdc6a38740120896209a92b2f27b20bc"
 metafile = true
 
 [[files]]
@@ -1278,8 +1283,8 @@ hash = "38cee16f00ed950e1f245f9de86dfbff938125f0461ad326fa81f659724a5d84"
 metafile = true
 
 [[files]]
-file = "mods/xaeros-minimap.pw.toml"
-hash = "f78b4cea99e90549cd9a38d1a65c6b1f248f60e4a8fa49850d90b79b32e9699c"
+file = "mods/xaeros-minimap-fair-play-edition.pw.toml"
+hash = "4b31d2c6b0e006d11c18530c2e1b50806708a235c09d53d70dfff17588a7d01b"
 metafile = true
 
 [[files]]

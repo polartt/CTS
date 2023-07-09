@@ -1,8 +1,7 @@
 console.info("Steel")
 
 ServerEvents.recipes(event => {
-	event.recipes.createMixing([Item.of(A("steel_ingot"))], [Item.of(MC("coal")), Item.of(MC("coal")), Item.of(MC("coal")), Item.of(MC("iron_ingot")), Item.of(C("limestone"))]).heated()
-	event.recipes.createMixing([Item.of(A("steel_ingot"))], [Item.of(MC("charcoal")), Item.of(MC("charcoal")), Item.of(MC("charcoal")), Item.of(MC("iron_ingot")), Item.of(C("limestone"))]).heated()
+	event.recipes.createMixing([Item.of(A("steel_ingot"))], [MC("#coals"), MC("#coals"), MC("#coals"), MC("iron_ingot"), C("limestone")]).heated()
 
   event.shapeless(MC("flint_and_steel", 2), [A("steel_ingot"), MC("flint")])
     
@@ -293,16 +292,7 @@ ServerEvents.recipes(event => {
 		I: A("steel_ingot")
 	})
 
-	event.shaped(Q("iron_plate", 48), [
-		"I",
-		"I",
-		"E"
-	], {
-		I: A("steel_ingot"),
-		E: MC("end_rod")
-	})
-
-	event.shaped(Q("iron_plate", 48), [
+	event.shaped(Q("iron_rod", 2), [
 		"I",
 		"I",
 		"E"
@@ -346,7 +336,7 @@ ServerEvents.recipes(event => {
 		N: A("steel_nugget")
 	})
 
-	event.shaped(SP("iron_gate", 4), [
+	event.shaped(C("andesite_alloy", 2), [
 		"AN",
 		"NA"
 	], {
@@ -485,7 +475,7 @@ ServerEvents.recipes(event => {
 		W: MC("#wool")
 	})
 
-	event.shaped(C("ornate_iron_window", 2), [
+	event.shaped(C("ornate_iron_window", 4), [
 		" N ",
 		"NGN"
 	], {
@@ -567,7 +557,7 @@ ServerEvents.recipes(event => {
 
 	event.shapeless(Q("iron_button"), [MC("#wooden_buttons"), A("steel_ingot")])
 
-	event.recipes.createMixing(C("andesite_alloy"), [MC("andesite"), A("steel_nugget")])
+	event.recipes.createMixing(C("andesite_alloy", 2), [MC("andesite"), A("steel_nugget")])
 
 	event.shapeless(C("encased_chain_drive", 2), [C("andesite_casing"), A("steel_nugget", 3)])
 

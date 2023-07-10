@@ -1,7 +1,7 @@
 console.info("Bronze")
 
 ServerEvents.recipes(event => {
-  event.recipes.createDeploying([Item.of(C("copper_casing", 2))], [F("#stripped_logs"), A("bronze_ingot")])
+  event.recipes.createDeploying(C("copper_casing", 2), [F("#stripped_logs"), A("bronze_ingot")])
 	
 	event.shaped(SP("cog_block", 12), [
 		"BBB",

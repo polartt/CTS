@@ -606,7 +606,7 @@ hash = "0ba57c4dfaa7ebe53a2121decea2a8f2fc05658fcdba48a417a31f4fec516ecd"
 
 [[files]]
 file = "kubejs/server_scripts/bronze_recipes.js"
-hash = "b7ae2691504d2812679b0abfdc19710f4fe8b5198b8b9facd34c8b2500896ce6"
+hash = "2f9d2eb402493a04e97d34e7ffb25dac782c005ab1a1400c293487a6669d63ac"
 
 [[files]]
 file = "kubejs/server_scripts/helpers.js"
@@ -614,7 +614,7 @@ hash = "2605dcd4d1109f7eef8ff860f6b12dcde7b7d5117186c1680089f235acf48488"
 
 [[files]]
 file = "kubejs/server_scripts/recipes.js"
-hash = "6b3c6932ac3fbdad1722c46f23275b8763edd5051d359f8a8e7d6c5b6580b95d"
+hash = "1152ae787e0acaea405bb3216d31818a85e1c15f0a1e2478ca225e1321df0bd8"
 
 [[files]]
 file = "kubejs/server_scripts/remove_recipes.js"
@@ -622,11 +622,11 @@ hash = "b8535c3cbfe45c527036f67bee22fc5ad6d1462572a7fd55f70ae32cf6581375"
 
 [[files]]
 file = "kubejs/server_scripts/sequenced_assembly.js"
-hash = "880f382e6388e48a9e74d7edd6bfe853cd4488f137e804e14a8b0b0e86be44ad"
+hash = "5b409187995d83c96e0db2d00fcaf70182780887c2c6c1faa67f6bf853d198a7"
 
 [[files]]
 file = "kubejs/server_scripts/steel_recipes.js"
-hash = "76df994ca6299dcea871061f2c2133db6a330b81c6e95139a6d2f9f8850a1596"
+hash = "797c173431f5249b5a6e0a93df72e242b5c125925647f85730603170293130c8"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"

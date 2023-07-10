@@ -1,7 +1,7 @@
 console.info("Steel")
 
 ServerEvents.recipes(event => {
-	event.recipes.createMixing([Item.of(A("steel_ingot"))], [MC("#coals"), MC("#coals"), MC("#coals"), MC("iron_ingot"), C("limestone")]).heated()
+	event.recipes.createMixing([A("steel_ingot")], [MC("#coals"), MC("#coals"), MC("#coals"), MC("iron_ingot"), C("limestone")]).heated()
 
   event.shapeless(MC("flint_and_steel", 2), [A("steel_ingot"), MC("flint")])
     
@@ -555,7 +555,7 @@ ServerEvents.recipes(event => {
 		E: C("electron_tube")
 	})
 
-	event.shapeless(Q("iron_button"), [MC("#wooden_buttons"), A("steel_ingot")])
+	event.shapeless(Q("iron_button", 2), [MC("#wooden_buttons"), A("steel_ingot")])
 
 	event.recipes.createMixing(C("andesite_alloy", 2), [MC("andesite"), A("steel_nugget")])
 

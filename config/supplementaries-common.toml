@@ -267,7 +267,7 @@
 	[building.ash]
 		enabled = true
 		#Burnable blocks will have a chance to create ash layers when burned
-		ash_from_fire = true
+		ash_from_fire = false
 		#Allows rain to wash away ash layers overtime
 		rain_wash_ash = true
 

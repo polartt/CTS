@@ -398,7 +398,7 @@ hash = "ebdff7804f001515c42e737f95f69f0652eff195ac00f5cf584b0b18ac777f7d"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "b7029da7e40ece0018e80b7b3e0dbca2fbf382f2c26134db84b63c5a33506959"
+hash = "e1355fb649886c6821a69d87694f9bccf41e88cb9e04d423b088fcc0209c6201"
 
 [[files]]
 file = "config/toastcontrol-common.toml"
@@ -784,7 +784,7 @@ metafile = true
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
-hash = "d3772ba304230f9b7f1c62ea44e1b65dd08927f1fa1170817d2665baa8c9951b"
+hash = "2c3ddac643593c3dec5bdad4a4ee6d10b62430409ee1c558ce3c5cbed9f40700"
 metafile = true
 
 [[files]]
@@ -1119,7 +1119,7 @@ metafile = true
 
 [[files]]
 file = "mods/maxs-pvp-enhancements.pw.toml"
-hash = "f069396f3da91e934fe9902210a54d1ca8bd783e4c41678262fd9bdc7baac583"
+hash = "40142a00f50bc09c81822bb281fda9edf3380cf80ee19b99ba9ee7c24e6a8b28"
 metafile = true
 
 [[files]]

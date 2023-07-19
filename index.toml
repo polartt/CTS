@@ -17,26 +17,6 @@ file = ".github/PULL_REQUEST_TEMPLATE.md"
 hash = "f63a32552717b5f25fad50c8bb2c5802f297c352c661640f2cef31f46eff0fcc"
 
 [[files]]
-file = ".idea/Bunny-fix-fork.iml"
-hash = "c96ea0b5b29abb7d5807671dd208fd63f63694dd236335d2fe8c074e89e94aa6"
-
-[[files]]
-file = ".idea/misc.xml"
-hash = "7c407574ffa3b8b662ddfe44b51a2bd7dff033acc7b6ef94793a0b3255ba919c"
-
-[[files]]
-file = ".idea/modules.xml"
-hash = "c849296a251787fc99a53eb9ee6c12d1f33e8f480c1e9abbf07f3875ad82f307"
-
-[[files]]
-file = ".idea/vcs.xml"
-hash = "62be7e0a7f84ab3c35b4d4bafb890a4951d061eadafde1a10aa3f5d0406db5df"
-
-[[files]]
-file = ".idea/workspace.xml"
-hash = "fb028e97a1edbf31f0d4dce6d2d9cf03e4dad42a474bdf2a800f7b74825ae18b"
-
-[[files]]
 file = "CREDITS.md"
 hash = "b7a8802e4842e559a43aed288a68aaa74f2ce89e354bd66f6cd954a1ed326cf0"
 
@@ -920,6 +900,11 @@ metafile = true
 [[files]]
 file = "mods/decorative-blocks.pw.toml"
 hash = "b33441b07f85bd9d3a7757020afcc01b80a44cc376b29475ed246b0f97ec7d11"
+metafile = true
+
+[[files]]
+file = "mods/dimensional-threading-reforged.pw.toml"
+hash = "312311a7e61ccd16a5a9aabf3b3a14bfb16e06eba1deb448d18acb1bf93edc1d"
 metafile = true
 
 [[files]]
